@@ -1,0 +1,23 @@
+{
+	"build": "public",
+	"baseurl": "/",
+	"theme": "compendium",
+	"theme_config": {
+        "compendium": {
+            "url": "git@github.com/plenti-themes/compendium",
+            "commit": "864bb3e13459fb1ce7123d1e8b79e3ff281de3b2"
+        }
+    },
+	"local": {
+		"port": 3000
+	},
+	"routes": {
+		"404": ":filename",
+		"index": ":paginate(totalPages)",
+		"pages": "pages/:filename",
+		"posts": "posts/:filename",
+		"projs": ":filename/:paginate(totalProjPages)",
+		"tags": ":filename/:paginate(totalTagsPages)",
+		"catgs": ":filename/:paginate(totalCatgsPages)"
+	}
+}
