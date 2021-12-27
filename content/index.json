@@ -24,39 +24,39 @@
   },
   "socialLinks": [
     {
-      "src": "https://www.linkedin.com/",
+      "src": "https://www.linkedin.com/in/benjaminjameswaller/",
       "ico": "lab la-linkedin-in",
       "enabled": true
     },
     {
-      "src": "https://github.com/",
+      "src": "https://github.com/jamestagal",
       "ico": "lab la-github-alt",
       "enabled": true
     },
     {
       "src": "https://about.gitlab.com/",
       "ico": "lab la-gitlab",
-      "enabled": true
+      "enabled": false
     },
     {
-      "src": "https://twitter.com/",
+      "src": "https://twitter.com/jamestagal",
       "ico": "lab la-twitter",
-      "enabled": false
+      "enabled": true
     },
     {
       "src": "https://keybase.io/",
       "ico": "lab la-keybase",
-      "enabled": true
+      "enabled": false
     },
     {
       "src": "https://www.reddit.com/",
       "ico": "lab la-reddit",
-      "enabled": true
+      "enabled": false
     },
     {
-      "src": "https://www.instagram.com/",
+      "src": "https://www.instagram.com/jamestagal/",
       "ico": "lab la-instagram",
-      "enabled": false
+      "enabled": true
     },
     {
       "src": "https://www.facebook.com/",
