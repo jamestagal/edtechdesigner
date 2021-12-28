@@ -1,5 +1,4 @@
 <script>
-  import H5P from "../scripts/h5p.svelte";
   // Aside component for search, categories, and tags
   import Aside from "../components/aside.svelte";
 
