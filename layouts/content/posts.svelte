@@ -28,7 +28,7 @@
   <div class="w-full md:w-10/12 xl:w-8/12 px-2 md:px-0">
     <div class="row flex flex-wrap">
       <div class="relative mb-8 w-full">
-        {#if src}
+        {#if h5p}
         <iframe 
           class="w-full h-full" 
           title={title}
