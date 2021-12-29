@@ -20,7 +20,11 @@
 
   let socialLinks = idxContent.socialLinks;
 </script>
-
+<head>
+  <script
+ src="https://edtechdesigner.h5p.com/js/h5p-resizer.js" charset="UTF-8">
+</script>
+</head>
 <section
   class="section flex flex-wrap items-center justify-between py-6 sm:py-16"
 >
