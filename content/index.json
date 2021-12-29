@@ -1,12 +1,12 @@
 {
   "name": "EdTech Designer",
-  "site": "www.example.net",
+  "site": "www.edtechdesigner.io",
   "logo": "logo.svg",
   "title": "EdTech Designer | A Professional Blog",
   "description": "A professional blog of Benjamin Waller",
   "SEO": {
     "locale": "en_US",
-    "twitteruser": "@mytag",
+    "twitteruser": "@jamestagal",
     "author": "Benjamin Waller",
     "author_site": "",
     "image": "logo.png"
