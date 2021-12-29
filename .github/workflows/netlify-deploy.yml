@@ -1,0 +1,28 @@
+name: netlify deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build
+        uses: docker://plentico/plenti:latest
+        with:
+          entrypoint: /plenti
+          args: build
+
+      - name: Setup Node
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '13'
+
+      - name: Deploy to Netlify
+        run: |
+          npm install netlify-cli -g
+          netlify deploy --prod --dir ./public --site=${{ secrets.NETLIFY_SITE_ID }} --auth=${{ secrets.NETLIFY_AUTH_TOKEN }} --timeout=600 --message "Deployed on $(date)"
