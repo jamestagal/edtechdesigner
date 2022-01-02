@@ -4,6 +4,7 @@
 
   export let allPages;
   export let isDark, theme, idxContent;
+  export let logo;
 
   let site_name = idxContent.name.split(" ");
   let menuShow = false;
@@ -62,7 +63,9 @@
     <nav class="flex flex-wrap items-center justify-between">
       <!-- logo -->
       <h1 class="font-bold opacity-100 my-0 flex items-center">
+        {#if logo}
         <img width="50" height="50" src="assets/logo.svg" alt="Logo" />
+        {/if}
         <a class="ml-2 text-4xl menu" href=".">
           {#if site_name.length > 1}
             <span class="accent" style="opacity: 1;"
