@@ -1,5 +1,5 @@
 <script>
-  export let title, splash, articleBody;
+  export let title, splash, hero, articleBody;
 </script>
 <head>
   <script
@@ -8,6 +8,9 @@
 </head>
 <!-- NEW Hero section-->
 <div id="hero" class="container mx-auto relative">
+  <h2 class="header text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+    {hero.pre}<span class="accent-b">{hero.accent}</span><br />{hero.post}
+  </h2>
   <iframe 
   class="w-full h-full" 
   title={title}
