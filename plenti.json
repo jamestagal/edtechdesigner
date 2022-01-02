@@ -16,7 +16,7 @@
 		"catgs": ":filename/:paginate(totalCatgsPages)",
 		"index": ":paginate(totalPages)",
 		"pages": "pages/:filename",
-		"posts": "posts/:filename",
+		"posts": "posts/:fields(title)",
 		"projs": ":filename/:paginate(totalProjPages)",
 		"tags": ":filename/:paginate(totalTagsPages)"
 	}
