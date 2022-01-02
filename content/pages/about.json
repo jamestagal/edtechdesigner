@@ -1,0 +1,29 @@
+{
+  "title": "About Me",
+  "pageType": "About",
+  "enabled": true,
+  "menu": true,
+  "author": {
+    "name": "Ro Doe",
+    "url": "pages/about"
+  },
+  "image": {
+    "src": "omid-ghobadi-sjoqjY9faJE-unsplash.jpg",
+    "alt": "Post Image",
+    "citation": "Photo by <a href='https://unsplash.com/@omidghaf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Omid Ghobadi</a> on <a href='https://unsplash.com/@omidghaf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>"
+  },
+  "splash": {
+    "src": "oliver-plattner-Plt0vHDRb9U-unsplash.jpg",
+    "alt": "Post Image",
+    "citation": "Photo by <a href='https://unsplash.com/@oplattner?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Oliver Plattner</a> on <a href='https://unsplash.com/s/photos/san-francisco?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>"
+  },
+  "dateCreated": "1/8/2020",
+  "dateModified": "1/8/2020",
+  "hero": {
+    "pre": "Hi! I'm ",
+    "accent": "Jo",
+    "post": "the data wisperer",
+    "tagline": "I do x with y"
+  },
+  "articleBody": "Benjamin Waller is an educator and has been an English as a Second Language (ESL) teacher in the AMEP program both at the Canberra Institute of Technology (CIT) and AMES in Victoria for over a decade. He has worked as an education designer at CIT in a team, leading the Innovative Learning Resources project as part of CIT’s Strategic Compass 2020 initiative and is currently teaching English to international students in the English language program at the English Language Center at CIT.<br/><br/>Ben has a Graduate Diploma in Secondary Education in Teaching English to Speakers of Other Languages (TESOL) and Languages Other Than English (LOTE) Vietnamese, qualifications. His passion for language teaching, eLearning and instructional design has enabled him to develop innovative online courses for CIT and eLearn Vietnamese (a passion project) with a focus on consistent and functional, bite size learning design to facilitate learner engagement and rich learning experiences."
+}
