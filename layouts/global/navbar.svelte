@@ -8,6 +8,7 @@
   let site_name = idxContent.name.split(" ");
   let menuShow = false;
 
+
   function toggleDark() {
     // Set the boolean
     isDark = !isDark;
