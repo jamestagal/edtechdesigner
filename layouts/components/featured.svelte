@@ -60,10 +60,10 @@
       <!-- Carousel Overlay Text -->
       <div
         id="featureOverlayText"
-        class="feature w-full absolute row m-0 px-16"
+        class="feature w-full absolute top-40 m-0 px-16"
       >
         <div class="col-lg-2" />
-        <div class="col-lg-8">
+        <div class="col-lg-8 bg-white bg-opacity-5 mx-auto shadow-xl">
           <h2
             class="w-full text-center pb-3 md:pb-4 lg:pb-5 text-3xl sm:text-4xl md:text-5xl"
           >
