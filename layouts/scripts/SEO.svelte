@@ -33,11 +33,7 @@
     image_url = site_url + "assets/posts/" + content.fields.image.src;
     image_alt = content.fields.image.alt;
     dateCreated = content.fields.dateCreated;
-    if (content.fields.dateModified) {
-      dateModified = content.fields.dateModified;
-    } else {
-      dateModified = false;
-    }
+    dateModified = content.fields.dateModified ?? false;
   } else {
     isArticle = false;
     page_title = idxContent.title;

@@ -17,11 +17,8 @@
         dateCreated: post.fields.dateCreated,
         tags: post.fields.tags,
         catgs: post.fields.categories,
-        dateModified: false,
       };
-      if (post.fields.dateModified) {
-        tagPost.dateModified = post.fields.dateModified;
-      }
+      tagPost.dateModified = post.fields.dateModified ?? false;
 
       // Loop through each post tag array
       post.fields.tags.forEach((element) => {
