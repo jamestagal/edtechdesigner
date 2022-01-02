@@ -40,7 +40,9 @@
             <a href={author.url}>{author.name}</a>
           </li>
           <li class="px-1 inline-flex">Created : {dateCreated}</li>
-          <li class="px-1 inline-flex">Updated : {dateModified}</li>
+          {#if dateModified}
+            <li class="px-1 inline-flex">Updated : {dateModified}</li>
+          {/if}
         </ul>
         <ul class="text-meta flex flex-wrap mb-6">
           <li class="px-1 inline-flex">
