@@ -78,3 +78,16 @@
     "<a target='blank' rel='noopener noreferrer'"
   )}
 </div>
+<!-- About section - Employment Timeline -->
+<div id="timeline" class="container mx-auto relative">
+  <iframe 
+  class="w-full h-full" 
+  title={title}
+  width="1088"
+  height="637"
+  frameborder="0"
+  allowfullscreen="allowfullscreen"
+  allow="geolocation *; microphone *; camera *; midi *; encrypted-media *"
+  src="https://edtechdesigner.h5p.com/content/1291111834693905529/embed"
+/>
+</div>
