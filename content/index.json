@@ -12,8 +12,8 @@
     "image": "logo.png"
   },
   "theme": {
-    "postsPerPage": 6,
-    "projsPerPage": 3,
+    "postsPerPage": 4,
+    "projsPerPage": 4,
     "tagsPerPage": 12,
     "mathTypesetting": true,
     "codeHighlighting": true,
