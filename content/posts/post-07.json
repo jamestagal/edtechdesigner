@@ -2,9 +2,9 @@
   "title": "EdTechPosium 2021",
   "project": "Speaking Events",
   "image": {
-    "src": "antonio-rull-tMH2UgXW3c0-unsplash.jpg",
+    "src": "EdTechPosium-siteImage2021.jpeg",
     "alt": "Post Image",
-    "citation": "Photo by <a href='https://unsplash.com/@antoniorull?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Antonio Rull</a> on <a href='https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>"
+    "citation": "Photo by <a href='https://edtechposium.net.au/wp-content/uploads/2019/05/cropped-canberra_nods-2.jpg'>ANU EdTechPosium 2021</a>"
   },
   "author": {
     "name": "Benjamin Waller",
@@ -14,7 +14,7 @@
   "dateModified": "",
   "categories": ["Education Technology"],
   "tags": ["H5P"],
-  "featured": false,
+  "featured": true,
   "draft": true,
   "articleBody": "Phasellus fermentum felis ut magna hendrerit, ut egestas augue elementum. Aliquam pharetra sagittis mollis. Maecenas ut libero vestibulum, pharetra dolor sed, mollis turpis.",
   "h5p": {
