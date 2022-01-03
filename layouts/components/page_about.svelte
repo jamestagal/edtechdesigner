@@ -8,7 +8,7 @@
 </head>
 <!-- NEW Hero section-->
 <div id="hero" class="container mx-auto relative">
-  <h2 class="header text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+  <h2 class="header text-xl sm:text-3xl md:text-4xl lg:text-5xl">
     {hero.pre}<span class="accent-b">{hero.accent}</span><br />{hero.post}
   </h2>
   <iframe 
@@ -52,7 +52,7 @@
 
 <!-- About section -->
 <div id="about" class="relative">
-  <div class="w-full pt-16">
+  <div class="w-full pt-10">
     <img
       class="w-full object-center object-cover h-screen-80 lg:h-screen-90"
       style="filter: brightness(60%)"
@@ -79,7 +79,7 @@
   )}
 </div>
 <!-- About section - Employment Timeline -->
-<div id="timeline" class="container mx-auto relative">
+<div id="timeline" class="container mx-auto relative pt-10">
   <iframe 
   class="w-full h-full" 
   title={title}
