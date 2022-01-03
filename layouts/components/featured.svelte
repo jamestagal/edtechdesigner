@@ -51,7 +51,7 @@
           class="w-full {featuredPage == 'Frame'
             ? 'rounded-lg object-cover h-screen-70'
             : 'object-cover h-screen'}"
-          style="filter: blur(4px) brightness(50%)"
+          style="filter: brightness(60%)"
           src="assets/posts/{post.fields.image.src}"
           alt={post.fields.image.alt}
         />
