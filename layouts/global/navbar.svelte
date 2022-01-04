@@ -104,7 +104,7 @@
           <a class="block md:inline-flex px-2 py-1 md:py-0" href="."
             ><span class="menu">Home</span></a
           >
-          <a class="block md:inline-flex px-2 py-1 md:py-0" href="projs/"
+          <a class="block md:inline-flex px-2 py-1 md:py-0" href="posts/"
             ><span class="menu">Posts</span></a
           >
           {#each allPages as page, i}
