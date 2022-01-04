@@ -1,5 +1,6 @@
 <script>
   import Meta from "./post_meta.svelte";
+  import { sortByDate } from '../scripts/sort_by_date.svelte';
   export let projArry,
     uniqProjs,
     allProjs,
@@ -16,14 +17,12 @@
     <div class="rounded-xl overflow-hidden shadow-md bg-secondary">
       <div class="flex-none lg:flex">
         <div class="mx-2 md:mx-6 mb-2 md:mb-3 my-1">
-          {#each allProjs as post, p}
+          <h2 class="header text-xl md:text-2xl lg:text-3xl my-5">
+            <span class="accent">Posts:</span>
+            {proj}
+          </h2>
+          {#each sortByDate(allProjs) as post, p}
             {#if proj == post.fields.posts}
-              {#if projArry.find((pst) => pst.proj === proj).title == post.fields.title}
-                <h2 class="header text-xl md:text-2xl lg:text-3xl my-5">
-                  <span class="accent">Posts:</span>
-                  {proj}
-                </h2>
-              {/if}
               <div class="flex items-center mb-3">
                 <img
                   class="inline-block object-cover rounded-md w-28 h-28"
