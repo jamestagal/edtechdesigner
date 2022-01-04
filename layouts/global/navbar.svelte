@@ -105,7 +105,7 @@
             ><span class="menu">Home</span></a
           >
           <a class="block md:inline-flex px-2 py-1 md:py-0" href="projs/"
-            ><span class="menu">Projects</span></a
+            ><span class="menu">Posts</span></a
           >
           {#each allPages as page, i}
             {#if page.fields.enabled && page.fields.menu}
