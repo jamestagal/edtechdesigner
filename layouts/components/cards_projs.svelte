@@ -1,7 +1,7 @@
 <script>
   import Meta from "./post_meta.svelte";
   import { sortByDate } from '../scripts/sort_by_date.svelte';
-  export let projArry,
+  export let 
     uniqProjs,
     allProjs,
     projRangeHigh,
