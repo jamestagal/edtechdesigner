@@ -80,7 +80,7 @@
               <a href={post.fields.author.url}>{post.fields.author.name}</a>
             </li>
             <li class="px-2">
-              <i class="las la-images text-lg relative" />
+              <i class="las la-image text-lg relative" />
               <span>{@html post.fields.image.citation.replaceAll(
               "<a ",
               "<a target='blank' rel='noopener noreferrer'")}
