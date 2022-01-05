@@ -2,9 +2,9 @@
   "title": "Lesson example : Xin Chào | Greetings",
   "posts": "Learning Vietnamese",
   "image": {
-    "src": "anastasiya-yilmaz-oBO_UCnkyXA-unsplash.jpg",
+    "src": "eLearn-vietnamese-lesson-xin-chào-Greetings.jpg",
     "alt": "Post Image",
-    "citation": "Photo by <a href='https://unsplash.com/@anastasiayilmaz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Anastasiya Yilmaz</a> on <a href='https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>"
+    "citation": "Photo by <a href={author_url}>{author_name}</a>"
   },
   "author": {
     "name": "Benjamin Waller",

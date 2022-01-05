@@ -2,9 +2,9 @@
   "title": "ACTHP Learning Module | Artefactchat | Calthorpes' House",
   "posts": "ACT Historic Places",
   "image": {
-    "src": "antonio-rull-tMH2UgXW3c0-unsplash.jpg",
+    "src": "learning-module-artefactchat-calthorpes-house.jpg",
     "alt": "Post Image",
-    "citation": "Photo by <a href='https://unsplash.com/@antoniorull?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Antonio Rull</a> on <a href='https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>"
+    "citation": "Photo by <a href={author_url}>{author_name}</a>"
   },
   "author": {
     "name": "Benjamin Waller",
