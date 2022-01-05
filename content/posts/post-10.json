@@ -4,7 +4,7 @@
   "image": {
     "src": "learning-module-artefactchat-calthorpes-house.jpg",
     "alt": "Post Image",
-    "citation": "Photo by <a href={author_url}>{author_name}</a>"
+    "citation": "Photo by Benjamin Waller"
   },
   "author": {
     "name": "Benjamin Waller",
