@@ -1,6 +1,6 @@
 {
   "title": "Lesson example : Xin Chào | Greetings",
-  "posts": "eLearn Vietnamese",
+  "posts": "Learning Vietnamese",
   "image": {
     "src": "anastasiya-yilmaz-oBO_UCnkyXA-unsplash.jpg",
     "alt": "Post Image",
@@ -10,7 +10,7 @@
     "name": "Benjamin Waller",
     "url": "pages/about"
   },
-  "dateCreated": "1/11/2020",
+  "dateCreated": "01/11/2020",
   "dateModified": "",
   "categories": ["Learning Vietnamese"],
   "tags": ["H5P"],
