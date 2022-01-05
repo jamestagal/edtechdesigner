@@ -4,7 +4,7 @@
   "image": {
     "src": "Tromso-Norway.jpg",
     "alt": "Post Image",
-    "citation": "Photo by <a href={author_url}>{author_name}</a>"
+    "citation": "Photo by Benjamin Waller"
   },
   "author": {
     "name": "Benjamin Waller",
