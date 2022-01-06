@@ -33,7 +33,7 @@
   <div class="w-full md:w-10/12 xl:w-8/12 px-2 md:px-0">
     <div class="row flex flex-wrap">
       <div class="w-full md:w-9/12 mb-5 sm:mb-0 px-0 md:pr-10">
-        <h1 class="header mb-2">{title}</h1>
+        <h2 class="header mb-2 sm:text-2xl">{title}</h2>
         <ul class="text-meta flex flex-wrap">
           <li class="px-1 inline-flex">
             <i class="las la-user-astronaut text-base relative" />
