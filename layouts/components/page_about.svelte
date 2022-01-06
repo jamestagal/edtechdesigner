@@ -6,7 +6,52 @@
  src="https://edtechdesigner.h5p.com/js/h5p-resizer.js" charset="UTF-8">
   </script>
 </head>
-<!-- NEW Hero section-->
+<!-- Test Hero section-->
+<div id="hero" class="container mx-auto relative">
+  <body class="bg-gray-300">
+    <div class="bg-gray-100 grid lg:grid-cols-2 2xl:grid-cols-5">
+      <div
+        class="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:px-12 lg:py-24 lg:max-w-full xl:mr-0 2xl:col-span-2"
+      >
+        <div class="xl:max-w-xl">
+          <img
+            class="mt-6 rounded-lg shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover object-center lg:hidden"
+            src="assets/pages/ben-profile-pic.jpg"
+            alt="Ben workcationing in the capital"
+          />
+          <h1
+            class="text-2xl font-bold text-gray-900 sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl"
+          >
+          {hero.pre}<span class="accent-b">{hero.accent}</span>
+            <br class="hidden lg:inline" />
+            {hero.post}
+          </h1>
+          <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl">
+            Workcation helps you find work-friendly rentals in beautiful locations so you can enjoy
+            some nice weather even when you're not on vacation. Workcation helps you find work-friendly rentals in beautiful locations so you can enjoy
+            some nice weather even when you're not on vacation.
+          </p>
+          <div class="mt-4 sm:mt-6">
+            <a
+              class="inline-block px-5 py-3 rounded-lg bg-indigo-500 uppercase tracking-wider font-semibold text-sm text-white shadow-lg sm:text-base"
+              href="https://www.benjaminjameswaller.com/"
+            >
+              See my person blog
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hidden relative lg:block 2xl:col-span-3">
+        <img
+          class="absolute inset-0 w-full h-full object-cover object-center"
+          src="assets/pages/ben-profile-pic.jpg"
+          alt="Woman workcationing on the beach"
+        />
+      </div>
+    </div>
+  </body>
+</div>
+<!-- NEW Hero section
 <div id="hero" class="container mx-auto relative">
   <h2 class="header text-xl sm:text-3xl md:text-4xl lg:text-5xl">
     {hero.pre}<span class="accent-b">{hero.accent}</span><br />{hero.post}
@@ -22,6 +67,7 @@
   src="https://edtechdesigner.h5p.com/content/1291111834028671999/embed"
 />
 </div>
+-->
 <!-- Hero section
 <div id="hero" class="w-full grid grid-cols-2 relative">
   <div
