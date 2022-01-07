@@ -33,7 +33,7 @@
   $: projRangeLow = projRangeHigh - projsPerPage;
 </script>
 
-<div class="w-full py-6 sm:py-16">
+<div class="w-full py-6 sm:py-12">
   <section class="w-full flex flex-wrap items-center justify-between">
     <div class="w-0 md:w-1/12 xl:w-2/12" />
     <div class="w-full md:w-10/12 xl:w-8/12 px-2 md:px-0">
