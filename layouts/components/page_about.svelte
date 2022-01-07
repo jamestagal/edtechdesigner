@@ -7,7 +7,7 @@
   </script>
 </head>
 <!-- Test Hero section-->
-<div id="hero" class="container mx-auto relative">
+
   <body class="bg-gray-300">
     <div class="bg-gray-100 grid lg:grid-cols-2 2xl:grid-cols-5">
       <div
@@ -50,7 +50,7 @@
       </div>
     </div>
   </body>
-</div>
+
 <!-- NEW Hero section
 <div id="hero" class="container mx-auto relative">
   <h2 class="header text-xl sm:text-3xl md:text-4xl lg:text-5xl">
