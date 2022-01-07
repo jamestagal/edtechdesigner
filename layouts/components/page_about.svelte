@@ -1,5 +1,5 @@
 <script>
-  export let title, splash, hero, articleBody;
+  export let title, hero;
 </script>
 <head>
   <script
@@ -20,17 +20,16 @@
             alt="Ben workcationing in the capital"
           />
           <h1
-            class="text-2xl font-bold text-gray-900 sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl"
+            class="mt-6 text-2xl font-bold text-gray-900 sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl"
           >
           {hero.pre}<span class="accent-b">{hero.accent}</span>
             <br class="hidden lg:inline" />
             {hero.post}
           </h1>
           <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl">
-            Workcation helps you find work-friendly rentals in beautiful locations so you can enjoy
-            some nice weather even when you're not on vacation. Workcation helps you find work-friendly rentals in beautiful locations so you can enjoy
-            some nice weather even when you're not on vacation.
+            I design and develop educational programs in the LLND (Language Literacy, Numeracy and Digital) department at the Canberra Institute of Technology (CIT). I have taught English as a Second Language (ESL) and now EAL (English as an Additional Language) in the AMEP program both at the CIT and AMES in Victoria for over a decade. I have worked as an education designer at CIT in a team, leading the Innovative Learning Resources project as part of CIT’s Strategic Compass 2020 initiative. My passion for language teaching, eLearning and instructional design has enabled me to develop innovative online courses and resources for a range of education projects with a focus on consistent, functional and bite-size learning design to facilitate learner engagement and rich learning experiences.
           </p>
+          <!-- Button
           <div class="mt-4 sm:mt-6">
             <a
               class="inline-block px-5 py-3 rounded-lg bg-indigo-500 uppercase tracking-wider font-semibold text-sm text-white shadow-lg sm:text-base"
@@ -39,6 +38,7 @@
               See my person blog
             </a>
           </div>
+          -->
         </div>
       </div>
       <div class="hidden relative lg:block 2xl:col-span-3">
@@ -68,7 +68,7 @@
 />
 </div>
 -->
-<!-- Hero section
+<!-- Original Hero section
 <div id="hero" class="w-full grid grid-cols-2 relative">
   <div
     class="pl-2 md:pl-6 lg:pl-10 xl:pl-16 w-screen-30 sm:w-screen-40 md:w-screen-60 lg:w-screen-70 xl:w-screen-80 absolute"
@@ -96,7 +96,7 @@
 </div>
 -->
 
-<!-- About section -->
+<!-- About section 
 <div id="about" class="relative">
   <div class="w-full pt-10">
     <img
@@ -124,6 +124,7 @@
     "<a target='blank' rel='noopener noreferrer'"
   )}
 </div>
+-->
 <!-- About section - Employment Timeline -->
 <div id="timeline" class="container mx-auto relative pt-10">
   <iframe 
