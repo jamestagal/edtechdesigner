@@ -67,11 +67,10 @@
           {@html articleBody}
         </p>
       </div>
-
-      <!-- Aside  -->
-      <div class="w-full md:w-3/12 mb-5 mb-lg-0 px-0">
-        <Aside {allPosts} {socialLinks} {tagsList} {catgList} />
-      </div>
+        <!-- Aside  -->
+        <div class="w-full order-last md:order-none md:w-3/12 mb-5 mb-lg-0 px-0">
+          <Aside {allPosts} {socialLinks} {tagsList} {catgList} />
+        </div>
       <div class="relative mb-8 w-full">
         {#if h5p}
         <iframe 
