@@ -25,7 +25,6 @@
       body: msgBody,
     });
 
-    /* remove API call
     console.log(msgData);
 
     // Setup XML connection request
@@ -42,8 +41,7 @@
     // Send message
     xhr.open("POST", API_URL + "mail/send");
     xhr.setRequestHeader("content-type", "application/json");
-    xhr.send(msgData); */
-   
+    xhr.send(msgData);
   }
 </script>
 
@@ -56,7 +54,7 @@
           <h2 class="header text-2xl mt-0 mb-6">{title}</h2>
           <p class="mb-10">{articleBody}</p>
         </div>
-        <form action="POST" data-netlify="true" id="contact form" class="w-full max-w-lg">
+        <form action="POST" data-netlify="true" name="contact form" class="w-full max-w-lg">
           <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
@@ -99,8 +97,9 @@
               </label>
               <input
                 class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-400 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
+                name="form-name"
                 id="email"
-                type="email"
+                type="hidden"
                 placeholder="Jane.Doe@example.net"
                 required
                 bind:value={addrFrom}
@@ -124,7 +123,7 @@
             </div>
           </div>
           <div class="field">
-          <div
+            <div
             data-netlify-recaptcha="true"></div>
           </div>
           <div class="md:flex md:items-center">
