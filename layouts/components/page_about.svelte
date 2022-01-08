@@ -1,5 +1,5 @@
 <script>
-  export let title, hero;
+  export let title, hero, articleBody;
 </script>
 <head>
   <script
@@ -27,7 +27,7 @@
             {hero.post}
           </h1>
           <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl">
-            I design and develop educational programs in the LLND (Language Literacy, Numeracy and Digital) department at the Canberra Institute of Technology (CIT). I have taught English as a Second Language (ESL) and now EAL (English as an Additional Language) in the AMEP program both at the CIT and AMES in Victoria for over a decade. I have worked as an education designer at CIT in a team, leading the Innovative Learning Resources project as part of CIT’s Strategic Compass 2020 initiative. <br><br> My passion for language teaching, eLearning and instructional design has enabled me to develop innovative online courses and resources for a range of education projects with a focus on consistent, functional and bite-size learning design to facilitate learner engagement and rich learning experiences.
+           {@html articleBody}
           </p>
           <!-- Button
           <div class="mt-4 sm:mt-6">
