@@ -63,7 +63,6 @@
               >
                 First Name
               </label>
-              <input type="hidden" name="contact form" value="ask-question" />
               <input
                 class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-400 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
                 id="grid-first-name"
