@@ -25,6 +25,7 @@
       body: msgBody,
     });
 
+    /* remove API call
     console.log(msgData);
 
     // Setup XML connection request
@@ -41,7 +42,8 @@
     // Send message
     xhr.open("POST", API_URL + "mail/send");
     xhr.setRequestHeader("content-type", "application/json");
-    xhr.send(msgData);
+    xhr.send(msgData); */
+   
   }
 </script>
 
