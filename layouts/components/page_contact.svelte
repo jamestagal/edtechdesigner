@@ -54,7 +54,7 @@
           <h2 class="header text-2xl mt-0 mb-6">{title}</h2>
           <p class="mb-10">{articleBody}</p>
         </div>
-        <form action="POST" data-netlify="true" id="contactform" class="w-full max-w-lg">
+        <form action="POST" data-netlify="true" id="contact form" class="w-full max-w-lg">
           <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
@@ -63,6 +63,7 @@
               >
                 First Name
               </label>
+              <input type="hidden" name="contact form" value="ask-question" />
               <input
                 class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-400 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
                 id="grid-first-name"
@@ -120,6 +121,10 @@
                 bind:value={msgBody}
               />
             </div>
+          </div>
+          <div class="field">
+          <div
+            data-netlify-recaptcha="true"></div>
           </div>
           <div class="md:flex md:items-center">
             <div class="md:w-1/3">
