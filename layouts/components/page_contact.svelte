@@ -125,9 +125,9 @@
               />
             </div>
           </div>
-          <div class="field">
-            <div
-            data-netlify-recaptcha="true"></div>
+          <div class="md:flex md:items-center">
+            <div data-netlify-recaptcha="true">
+            </div>
           </div>
           <div class="md:flex md:items-center">
             <div class="md:w-1/3">
