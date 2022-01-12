@@ -64,7 +64,7 @@
                 First Name
               </label>
               <input
-                class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-400 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
+                class="appearance-none block w-full bg-gray-100 text-gray-700 border focus:border-fuchsia-700 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
                 id="grid-first-name"
                 type="text"
                 placeholder="Jane"
@@ -79,7 +79,7 @@
                 Last Name
               </label>
               <input
-                class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-400 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
+                class="appearance-none block w-full bg-gray-100 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
                 id="grid-last-name"
                 type="text"
                 placeholder="Doe"
@@ -96,7 +96,7 @@
                 E-mail
               </label>
               <input
-                class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-400 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
+                class="appearance-none block w-full bg-gray-100 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
                 id="email"
                 type="email"
                 placeholder="Jane.Doe@example.net"
@@ -114,7 +114,7 @@
                 Message
               </label>
               <textarea
-                class=" no-resize appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-400 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white h-48 resize-none"
+                class=" no-resize appearance-none block w-full bg-gray-100 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white h-48 resize-none"
                 id="message"
                 placeholder="Write something here..."
                 bind:value={msgBody}
