@@ -54,7 +54,7 @@
           <h2 class="header text-2xl mt-0 mb-6">{title}</h2>
           <p class="mb-10">{articleBody}</p>
         </div>
-        <form action="POST" data-netlify="true" name="contact form" class="w-full max-w-lg">
+        <form action="POST" data-netlify="true" id="contact form" class="w-full max-w-lg">
           <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
@@ -67,6 +67,7 @@
                 class="appearance-none block w-full bg-gray-100 text-gray-700 border focus:border-fuchsia-700 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
                 id="grid-first-name"
                 type="text"
+                name="frist name"
                 placeholder="Jane"
                 bind:value={nameFrst}
               />
@@ -82,6 +83,7 @@
                 class="appearance-none block w-full bg-gray-100 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
                 id="grid-last-name"
                 type="text"
+                name="last name"
                 placeholder="Doe"
                 bind:value={nameLast}
               />
@@ -99,6 +101,7 @@
                 class="appearance-none block w-full bg-gray-100 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
                 id="email"
                 type="email"
+                name="email"
                 placeholder="Jane.Doe@example.net"
                 required
                 bind:value={addrFrom}
@@ -117,6 +120,7 @@
                 class=" no-resize appearance-none block w-full bg-gray-100 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white h-48 resize-none"
                 id="message"
                 placeholder="Write something here..."
+                name="message"
                 bind:value={msgBody}
               />
             </div>
