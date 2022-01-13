@@ -20,7 +20,9 @@
       <ul class="text-aside mb-4">
         {#each catgList as catg, i}
           <li class="flex rounded items-center mt-3 mr-3">
+            <div style="padding: 0px 0.5em; border: 1px solid black; border-radius: 0.25em 0px 0px 0.25em;">
             <a href="catgs/{i + 1}">{catg}</a>
+          </div>
           </li>
         {/each}
       </ul>
