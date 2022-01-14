@@ -21,8 +21,8 @@
         {#each catgList as catg, i}
           <li class="flex rounded items-center mt-3 mr-3">
             <div style="padding: 0px 0.5em; border: 1px solid black; border-radius: 0.25em 0px 0px 0.25em;">
-            <a href="catgs/{i + 1}">{catg}</a>
-          </div>
+            <a href="catgs/{i + 1}">{catg}</a></div>
+            <div style="display: flex; align-items: center; font-size: 0.8em; background-color: black; color: white; border-radius: 0px 0.25em 0.25em 0px; padding: 0px 0.5em; align-self: stretch;">{catgList.length}</div>
           </li>
         {/each}
       </ul>
