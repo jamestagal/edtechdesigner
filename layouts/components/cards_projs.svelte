@@ -11,14 +11,15 @@
   export let complete = true;
   export let skipbody = true;
 </script>
-
+<h2 class="header text-xl md:text-2xl lg:text-3xl">
+  <span class="accent">Posts</span>
+</h2>
 {#each uniqProjs as proj, i}
   {#if i >= projRangeLow && i < projRangeHigh}
     <div class="rounded-xl overflow-hidden shadow-md bg-secondary">
       <div class="flex-none lg:flex">
         <div class="mx-2 md:mx-6 mb-2 md:mb-3 my-1">
           <h2 class="header text-xl md:text-2xl lg:text-3xl my-5">
-            <span class="accent"></span>
             {proj}
           </h2>
           {#each sortByDate(allProjs) as post, p}
