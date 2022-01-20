@@ -1,23 +1,27 @@
 <script>
-  import H5P from "../scripts/h5p.svelte";
   // Aside component for search, categories, and tags
   import Aside from "../components/aside.svelte";
+  import PostMeta from "../components/post_meta.svelte";
 
   // Values passed in from "html.svelte"
   export let idxContent, allPosts, tagsList, catgList;
 
   // Content field Values passed in via layout content {...content.fields}
-  export let articleBody,
-    title,
-    image,
-    author,
-    dateCreated,
-    dateModified,
-    categories,
-    h5p,
-    tags;
+  export let articleBody, title, image, author;
+  export let dateCreated, dateModified, categories, tags, h5p;
+  export let complete = true;
+  export let skipbody = true;
+
 
   let socialLinks = idxContent.socialLinks;
+  let post = {
+    author_url: author.url,
+    author_name: author.name,
+    dateCreated: dateCreated,
+    dateModified: dateModified,
+    tags: tags,
+    catgs: categories,
+  };
 </script>
 
 <head>
@@ -35,35 +39,12 @@
       <div class="w-full md:w-9/12 mb-5 sm:mb-0 px-0 md:pr-10">
         <h1 class="header text-2xl mb-2 sm:text-3xl md:text-4xl">{title}</h1>
         <ul class="text-meta flex flex-wrap">
-          <li class="px-1 inline-flex">
-            <i class="las la-user-astronaut text-base relative" />
-            <a href={author.url}>{author.name}</a>
-          </li>
-          <li class="px-1 inline-flex">Created : {dateCreated}</li>
-          {#if dateModified}
-            <li class="px-1 inline-flex">Updated : {dateModified}</li>
-          {/if}
-        </ul>
-        <ul class="text-meta flex flex-wrap mb-6">
-          <li class="px-1 inline-flex">
-            Categories:
-            {#each categories as catg, i}
-              <a href="catgs/{catgList.indexOf(catg) + 1}" class="ml-1">
-                {catg}{#if i < categories.length - 1},
-                {/if}
-              </a>
-            {/each}
-          </li>
-          <li class="px-1 inline-flex">
-            Tags:
-            {#each tags as tag, i}
-              <a href="tags/{tagsList.indexOf(tag) + 1}" class="ml-1">
-                {tag}{#if i < tags.length - 1}, {/if}
-              </a>
-            {/each}
-          </li>
-        </ul>
-        <p>
+          <li class="mx-0 -mt-1 text-meta inline-flex">
+          <i class="las la-user-astronaut text-lg" />
+        </li>
+        <PostMeta {post} {tagsList} {catgList} {complete} {skipbody} />
+      </ul>
+      <p class="mt-6">
           {@html articleBody}
         </p>
       </div>
@@ -85,14 +66,14 @@
         />
         {:else}
         <img
-          class="rounded-lg overflow-hidden w-full h-screen-70 object-cover object-center"
+          class="rounded-lg overflow-hidden w-full h-screen-60 object-cover object-center"
           src="assets/posts/{image.src}"
           alt={image.alt}
         />
         <span class="text-meta"
           >{@html image.citation.replaceAll(
             "<a ",
-            "<a target='blank' rel='noopener noreferrer'"
+            "<a target='blank' rel='noopener'"
           )}</span
         >
         {/if}

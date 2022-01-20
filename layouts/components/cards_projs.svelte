@@ -1,5 +1,5 @@
 <script>
-  import Meta from "./post_meta.svelte";
+  import PostMeta from "./post_meta.svelte";
   import { sortByDate } from '../scripts/sort_by_date.svelte';
   export let 
     uniqProjs,
@@ -31,10 +31,21 @@
                   alt={post.fields.image.alt}
                 />
                 <div class="inline-block ml-2">
-                  <h3 class="header my-0 text-xl md:text-2xl">
+                  <h3 class="header mt-0 mb-1 text-xl md:text-2xl">
                     <a href={post.path}>{post.fields.title}</a>
                   </h3>
-                  <Meta {post} {tagsList} {catgList} {complete} {skipbody} />
+                  <ul class="text-meta flex flex-wrap">
+                    <li class="mx-0 -mt-1 text-meta inline-flex">
+                      <i class="las la-user-astronaut text-lg" />
+                    </li>
+                    <PostMeta
+                      {post}
+                      {tagsList}
+                      {catgList}
+                      {complete}
+                      {skipbody}
+                    />
+                  </ul>
                 </div>
               </div>
             {/if}

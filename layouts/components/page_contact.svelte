@@ -12,7 +12,7 @@
   let addrFrom = "";
   let nameFrst = "";
   let nameLast = "";
-  let subject = idxContent.name
+  let subject = idxContent.name;
   let msgBody = "";
 
   // TODO: complete serverless function for sending contact request
@@ -43,17 +43,28 @@
     xhr.setRequestHeader("content-type", "application/json");
     xhr.send(msgData);
   }
+
+  let tname = title.split(" ");
 </script>
 
 <section class="section flex flex-wrap items-center justify-between">
   <div class="w-0 md:w-1/12 xl:w-2/12" />
   <div class="w-full md:w-10/12 xl:w-8/12 px-2 md:px-0">
     <div class="row md:flex md:flex-wrap">
-      <div class="w-full md:w-9/12 mb-lg-0 px-0">
-        <div class="">
-          <h2 class="header text-2xl mt-0 mb-6">{title}</h2>
+      <div class="w-full md:w-9/12 mb-lg-0 px-0 sm:pr-10">
+        <div class="rounded-xl overflow-hidden shadow-md bg-secondary">
+          <div class="mx-2 md:mx-6 mb-2 md:mb-3 my-1">
+            <h2 class="header text-xl md:text-2xl lg:text-3xl my-6">
+              {#if tname.length > 1}
+                <span class="accent" style="opacity: 1;"
+                  >{tname[0].toUpperCase()}
+                </span><span>{tname[1].toUpperCase()}</span>
+              {:else}
+                {title}
+              {/if}
+            </h2>
           <p class="mb-10">{articleBody}</p>
-        </div>
+
         <form action="POST" data-netlify="true" id="contact form" class="w-full max-w-lg">
           <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -144,7 +155,8 @@
           </div>
         </form>
       </div>
-
+    </div>
+  </div>
       <!-- ------------------------------------------------------- -->
       <!-- Set the aside as the last column in the row             -->
       <!-- ------------------------------------------------------- -->
