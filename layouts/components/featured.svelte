@@ -144,7 +144,7 @@
     color: var(--accent);
   }
   .feature {
-    bottom: 3%;
+    bottom: 20%;
   }
   ul {
     font-family: Anton, sans-serif;
