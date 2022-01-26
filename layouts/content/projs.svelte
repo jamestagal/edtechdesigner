@@ -4,40 +4,66 @@
   import Pagination from "../components/paginate.svelte";
 
   // Variables passed in from "html.svelte" via "index.svelte"
-  export let idxContent, allPosts, content, tagsList, catgList;
+  export let idxContent, allPosts, content, catgPosts, tagsPosts;
 
   $: currentPage = content.pager;
   let allProjs = allPosts.filter((content) => content.fields?.posts != "");
   let socialLinks = idxContent.socialLinks;
   let projsPerPage = idxContent.theme.projsPerPage;
-
-  let projArry = [];
+  let projsSort = idxContent.theme.projsSort;
+  let uniqProjs = [...new Set(allProjs.map((key) => key.fields.project))];
   let projList = [];
 
-  // Sort project posts in ascending order
-  allProjs.sort(function(a, b) {
-    // var s = new Date(b.fields.dateModified).getTime() - new Date(a.fields.dateModified).getTime();
-    var p = a.fields.posts.localeCompare(b.fields.posts)
-    return p == 0? a.path.localeCompare(b.path) : p;
-  });
+ // Create a grouped object array (projList) of projects
+ uniqProjs.forEach((proj) => {
+    let group = allProjs.filter((key) => key.fields.project == proj);
 
-  // create array of projects
-  allProjs.forEach((element) => {
-    projArry.push({
-      proj: element.fields.posts,
-      title: element.fields.title,
+    // What: sort the posts within the projects
+    if (projsSort == "Date") {
+      // Sort projects posts alphabetically by name
+      group.sort((a, b) => {
+        return a.path.localeCompare(b.path);
+      });
+    } else {
+      // Sort projects posts by newest first
+      group.sort((a, b) => {
+        return new Date(b.modified) - new Date(a.modified);
+      });
+    }
+
+    // What: Identify the most recent post date in a project
+    // Why:  Enable ability to list the most-recent projects first
+    let maxDate = [
+      ...new Set(group.map((key) => key.fields.dateModified)),
+    ].reduce(function (a, b) {
+      return a > b ? a : b;
     });
-    projList.push(element.fields.posts);
+    let obj = {
+      name: proj,
+      modified: maxDate,
+      posts: group,
+    };
+    projList.push(obj);
   });
 
-  let uniqProjs = [...new Set(projList)];
+  // What: Sort the projccts
+  if (projsSort == "Date") {
+    // Sort projects by newest first
+    projList.sort((a, b) => {
+      return new Date(b.modified) - new Date(a.modified);
+    });
+  } else {
+    // Sort projects alphabetically by name
+    projList.sort((a, b) => {
+      return a.name.localeCompare(b.name);
+    });
+  }
+
   let totalProjs = uniqProjs.length;
   let totalPages = Math.ceil(totalProjs / projsPerPage);
 
   // Setting variable for pagination logic.
   let totalProjPages = totalPages;
-  console.log(totalProjPages);
-
   $: projRangeHigh = currentPage * projsPerPage;
   $: projRangeLow = projRangeHigh - projsPerPage;
 </script>
@@ -53,13 +79,11 @@
             <!-- Setup a Card for each post as necessary                 -->
             <!-- ------------------------------------------------------- -->
             <Cards
-              {projArry}
-              {uniqProjs}
-              {allProjs}
-              {projRangeHigh}
-              {projRangeLow}
-              {tagsList}
-              {catgList}
+            {projList}
+            {projRangeHigh}
+            {projRangeLow}
+            {catgPosts}
+            {tagsPosts}
             />
           </div>
 
@@ -75,7 +99,7 @@
         <!-- Set the aside as the last column in the row             -->
         <!-- ------------------------------------------------------- -->
         <div class="w-full md:w-3/12 mb-lg-0 px-0">
-          <Aside {allPosts} {socialLinks} {tagsList} {catgList} />
+          <Aside {allPosts} {socialLinks} {catgPosts} {tagsPosts} />
         </div>
       </div>
     </div>
