@@ -1,13 +1,14 @@
 <script context="module">
   export function catgs_tags(posts) {
-    let tagPost = {};
+    let postObj = {};
     let tagsObj = {};
     let catgObj = {};
+    let index = 0;
 
     // Loop through each post
     posts.forEach((post) => {
       // Flag the post in question
-      tagPost = {
+      postObj = {
         path: post.path,
         img_src: post.fields.image.src,
         img_alt: post.fields.image.alt,
@@ -15,34 +16,55 @@
         author_url: post.fields.author.url,
         author_name: post.fields.author.name,
         dateCreated: post.fields.dateCreated,
+        dateModified: post.fields.dateModified,
         tags: post.fields.tags,
         catgs: post.fields.categories,
       };
-      tagPost.dateModified = post.fields.dateModified ?? false;
 
       // Loop through each post tag array
-      post.fields.tags.forEach((element) => {
+      post.fields.tags.forEach((tag) => {
         // Push each post into collection of tags
-        if (element in tagsObj) {
-          tagsObj[element].push(tagPost);
-        } else {
-          tagsObj[element] = [tagPost];
-        }
+        tagsObj[tag] = tagsObj[tag] || [];
+        tagsObj[tag].push(postObj);
       });
 
       // Loop through each post tag array
-      post.fields.categories.forEach((element) => {
+      post.fields.categories.forEach((catg) => {
         // Push each post into collection of catgs
-        if (element in catgObj) {
-          catgObj[element].push(tagPost);
-        } else {
-          catgObj[element] = [tagPost];
-        }
+        catgObj[catg] = catgObj[catg] || [];
+        catgObj[catg].push(postObj);
       });
     });
+
+        // alphabetically refactor object into array of key/value pairs
+        let tagKeys = Object.keys(tagsObj).sort();
+    let tagsList = [];
+    for (index = 0; index < tagKeys.length; index++) {
+      let obj = {
+        name: tagKeys[index],
+        posts: Object.values(tagsObj[tagKeys[index]]),
+        page: index + 1,
+        length: Object.keys(tagsObj[tagKeys[index]]).length,
+      };
+      tagsList.push(obj);
+    }
+
+    // alphabetically refactor object into array of key/value pairs
+    let catKeys = Object.keys(catgObj).sort();
+    let catgList = [];
+    for (index = 0; index < catKeys.length; index++) {
+      let obj = {
+        name: catKeys[index],
+        posts: Object.values(catgObj[catKeys[index]]),
+        page: index + 1,
+        length: Object.keys(catgObj[catKeys[index]]).length,
+      };
+      catgList.push(obj);
+    }
+
     return {
-      tagsObj: tagsObj,
-      catgObj: catgObj,
+      tags: tagsList, // array of tag objects
+      catgs: catgList, // array of catg objects
     };
   }
 </script>
