@@ -102,12 +102,12 @@
       >
         <div class="text-xl">
           <a class="block md:inline-flex px-2 py-1 md:py-0" href="."
-            ><span class="navmenu{content.path == '/' ? ' active' : ''}"
+            ><span class="navmenu{content.type == 'index' ? ' active' : ''}"
             >Home</span
           ></a
           >
           <a class="block md:inline-flex px-2 py-1 md:py-0" href="posts/"
-            ><span class="navmenu{content.path == 'projs' ? ' active' : ''}"
+            ><span class="navmenu{content.type == 'projs' ? ' active' : ''}"
             >Posts</span
           ></a
           >
