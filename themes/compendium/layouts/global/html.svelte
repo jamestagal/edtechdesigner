@@ -23,14 +23,10 @@
   export let allPages = allContent.filter((key) => key.type == "pages");
   export let allPosts = allContent.filter((key) => key.type == "posts");
 
-  // Assign the two maps
-  let metaVals = catgs_tags(allPosts);
-  export let tagsMap = new Map(Object.entries(metaVals.tagsObj));
-  export let catgsMap = new Map(Object.entries(metaVals.catgObj));
-
-  // Create the sort arrays for the Aside links
-  export let tagsList = Array.from(tagsMap.keys()).sort();
-  export let catgList = Array.from(catgsMap.keys()).sort();
+  // Create the list of posts by tags and categories
+  let ctObj = catgs_tags(allPosts);
+  export let catgPosts = Object(ctObj["catgs"]);
+  export let tagsPosts = Object(ctObj["tags"]);
 </script>
 
 <html lang="en">
@@ -43,7 +39,7 @@
     style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.10), 0 2px 4px 0 rgba(0, 0, 0, 0.20);"
   >
     <!-- reference the Navbar class from import above -->
-    <Navbar bind:isDark {allPages} {idxContent} />
+    <Navbar bind:isDark {allPages} {idxContent} {content} />
   </header>
 
   <body class="{isDark ? 'dk-theme' : 'lt-theme'} bg-main">
@@ -54,13 +50,11 @@
         {idxContent}
         {allLayouts}
         {allPosts}
+        {catgPosts}
+        {tagsPosts}
         {content}
         {isDark}
         {env}
-        {tagsMap}
-        {catgsMap}
-        {tagsList}
-        {catgList}
       />
     </main>
   </body>
