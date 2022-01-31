@@ -53,6 +53,9 @@
                     {skipbody}
                   />
                 </ul>
+                <p class="mt-1">
+                  {@html post.fields.articleSnapshot}
+                </p>
               </div>
             </div>
           {/each}
