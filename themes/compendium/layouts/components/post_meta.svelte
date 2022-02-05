@@ -19,7 +19,7 @@
 </li>
 {#if complete}
   <li class="mr-2 my-0 inline-flex">
-    Created: {dateCreated}
+   Created: {dateCreated}
   </li>
 {/if}
 <li class="mr-2 my-0 inline-flex">
