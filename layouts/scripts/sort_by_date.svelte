@@ -15,16 +15,16 @@
         // What: Sort by most recently modified posts
         // Why:  Option to highlight older posts that were recently updated
         // How:  Use modified date for sort
-        let dateA = new Date(a?.fields?.dateModified.split('/').reverse().join());
-        let dateB = new Date(b?.fields?.dateModified.split('/').reverse().join());
+        let dateA = new Date(a?.fields?.dateModified);
+        let dateB = new Date(b?.fields?.dateModified);
 
         return order == "oldest" ? dateA - dateB : dateB - dateA;
       } else {
         // What: Sort by most recently created posts
         // Why:  Highlight only newly created posts
         // How:  Use create date for sort
-        let dateA = new Date(a?.fields?.dateCreated.split('/').reverse().join());
-        let dateB = new Date(b?.fields?.dateCreated.split('/').reverse().join());
+        let dateA = new Date(a?.fields?.dateCreated);
+        let dateB = new Date(b?.fields?.dateCreated);
 
         return order == "oldest" ? dateA - dateB : dateB - dateA;
       }
