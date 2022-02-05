@@ -5,8 +5,11 @@
   export let skipbody = true;
   let Posts;
 
-  $: Posts = Object.values(catgPosts.filter((key) => key.name == catg)[0].posts)
+  $: Posts = Object.values(
+    catgPosts.filter((key) => key.name == catg)[0].posts
+  );
 </script>
+{#key catg}
 <h2 class="header text-xl md:text-2xl lg:text-3xl">
   <span class="accent">Category</span>
 </h2>
@@ -31,7 +34,13 @@
               <li class="mx-0 -mt-1 text-meta inline-flex">
                 <i class="las la-user-astronaut text-lg" />
               </li>
-              <PostMeta {post} {catgPosts} {tagsPosts} {complete} {skipbody} />
+              <PostMeta
+                {post}
+                {catgPosts}
+                {tagsPosts}
+                {complete}
+                {skipbody}
+              />
             </ul>
           </div>
         </div>
@@ -39,3 +48,4 @@
     </div>
   </div>
 </div>
+{/key}
