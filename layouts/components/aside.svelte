@@ -4,12 +4,8 @@
 
   export let allPosts, socialLinks, catgPosts, tagsPosts;
   
-  const toggle = () => {
-    backgroundPink = '#e2127a';
-  }
-    let backgroundPink = '#e2127a';
-   
-
+  let current = false;
+ 
   
 </script>
 
@@ -27,8 +23,8 @@
       <ul class="text-aside mb-4">
         {#each Object(catgPosts) as {page, name, length}}
           <li class="flex rounded items-center mt-3 mr-3">
-            <div class="border border-y-black border-l-black" style="background: {(backgroundPink)} padding: 0px 0.5em; border-radius: 0.25em 0px 0px 0.25em;">
-            <a on:click={toggle} href="catgs/{page}">{name}</a></div>
+            <div class="customStyle border border-y-black border-l-black" class:selected={current}>
+            <a on:click={() => current = true} href="catgs/{page}">{name}</a></div>
             <div style="display: flex; align-items: center; font-size: 0.8em; background-color: var(--surface); color: white; border-radius: 0px 0.25em 0.25em 0px; padding: 0px 0.5em; align-self: stretch;">{length}</div>
           </li>
         {/each}
@@ -41,7 +37,7 @@
       <ul class="text-aside mb-4">
         {#each Object(tagsPosts) as {page, name, length}}
           <li class="flex rounded items-center mt-3 mr-3">
-            <div class="border border-inherit border-y-black border-l-black" style="padding: 0px 0.5em; border-radius: 0.25em 0px 0px 0.25em;">
+            <div class="customStyle border border-inherit border-y-black border-l-black">
             <a on:click href="tags/{page}">{name}</a></div>
             <div style="display: flex; align-items: center; font-size: 0.8em; background-color: var(--surface); color: white; border-radius: 0px 0.25em 0.25em 0px; padding: 0px 0.5em; align-self: stretch;">{length}</div>
           </li>
@@ -51,8 +47,15 @@
   </div>
 </aside>
 <style>
-  a:focus {
+  a:active {
+    color: #F1F5F9;
+  }
+  .customStyle {
+    padding: 0px 0.5em;
+    border-radius: 0.25em 0px 0px 0.25em;
+  }
+  .selected {
     background: var(--accent);
-		color: #F1F5F9;
-	}
+    color: #F1F5F9;
+  }
 </style>
