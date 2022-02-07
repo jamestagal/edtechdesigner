@@ -5,7 +5,7 @@
 	"theme_config": {
 		"compendium": {
 			"url": "https://github.com/plenti-themes/compendium",
-			"commit": "4917e5bf44f240f063159bcdf81d83baf0ee6bd6"
+			"commit": "c1db71887fe65d3c4f3d7cb0f472908336e45337"
 		}
 	},
 	"local": {
