@@ -9,10 +9,10 @@
   // Post Meta configuration values
   const pm = {
     author: true,
-    date_modified: true,
+    date_modified: false,
     date_created: true,
     description: false,
-    catg_tags: true,
+    catg_tags: false,
     continue: false,
     feature: true,
   };
