@@ -5,8 +5,17 @@
   import PostMeta from "../components/post_meta.svelte";
 
   export let allFeatures, featuredPage, catgPosts, tagsPosts;
-  export let complete = true;
-  export let skipbody = true;
+
+  // Post Meta configuration values
+  const pm = {
+    author: true,
+    date_modified: true,
+    date_created: true,
+    description: false,
+    catg_tags: true,
+    continue: false,
+    feature: true,
+  };
 
   let featureIdx = 0;
 
@@ -78,17 +87,20 @@
               class="flex flex-wrap items-center justify-center text-sm md:text-md lg:text-lg {featuredPage ==
               'Frame'
                 ? 'md:mb-10 sm:mb-5'
-                : 'mb-24'}"
+                : 'mb-15'}"
             >
-              <li class="px-0 mt-0">
-                <i
-                  class="las la-user-astronaut text-lg md:text-xl lg:text-2xl relative"
-                />
-              </li>
-              <PostMeta {post} {catgPosts} {tagsPosts} {complete} {skipbody} />
+              <PostMeta {post} {catgPosts} {tagsPosts} {pm} />
             </ul>
           </div>
           <div class="col-lg-2" />
+        </div>
+        <div class="citation text-meta absolute">
+          <span
+            >{@html post.fields.image.citation.replaceAll(
+              "<a ",
+              "<a target='blank' rel='noopener'"
+            )}</span
+          >
         </div>
 
         <!-- Carousel Overlay Text -->
@@ -146,10 +158,20 @@
     color: var(--accent);
   }
   .feature {
-    bottom: 10%;
+    bottom: 15%;
+  }
+  .citation {
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(1, 1, 1, 0.3);
+    bottom: 3%;
+    left: 5%;
   }
   ul {
     font-family: Anton, sans-serif;
     font-weight: 300;
+  }
+  button {
+    border-radius: 50%;
+    background-color: rgba(1, 1, 1, 0.15);
   }
 </style>
