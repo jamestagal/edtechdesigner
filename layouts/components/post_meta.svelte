@@ -1,6 +1,6 @@
 <script>
   import { get_description } from "../scripts/get_description.svelte";
-  export let post, catgPosts, tagsPosts, complete, skipbody;
+  export let post, catgPosts, tagsPosts, pm;
 
   let path = post.path;
   let author_url = post.author_url ?? post.fields.author.url;
@@ -9,25 +9,30 @@
   let dateModified = post.dateModified ?? post.fields.dateModified;
   let tags = post.tags ?? post.fields.tags;
   let catgs = post.catgs ?? post.fields.categories;
-  let cardBody = skipbody
-    ? "skip"
-    : get_description(post.fields.articleBody, 170);
+  let cardBody = pm.description
+    ? get_description(post.fields.articleBody, 170)
+    : "";
 </script>
 
+{#if pm.author}
+  <li class="mx-0 -mt-1 text-meta inline-flex">
+    <i class="las la-user-astronaut{pm.feature ? ' feature' : ' standard'}" />
+  </li>
 <li class="mr-2 my-0 inline-flex">
   <a href={author_url}>{author_name}</a>
 </li>
-{#if complete}
+{/if}
+{#if pm.date_created}
   <li class="mr-2 my-0 inline-flex">
     {dateCreated}
   </li>
 {/if}
-{#if dateModified}
+{#if pm.date_modified}
   <li class="mr-2 my-0 inline-flex">
     Updated: {dateModified}
   </li>
 {/if}
-{#if complete}
+{#if pm.catg_tags}
   <br />
   <li class="mr-2 my-0 flex">
     <div style="display: flex; align-items: center; font-size: 0.8em; background-color: var(--surface); color: white; padding: 0px 0.5em; align-self: stretch; border-radius: 0.25em 0px 0px 0.25em;">
@@ -58,14 +63,52 @@
     {/each}
   </li>
 {/if}
-{#if cardBody !== "skip"}
+{#if pm.description}
   <p class="text-base">
     {@html cardBody}
   </p>
+{/if}
+{#if pm.continue}
   <article class="border-0">
     <div class="mb-4">
-      <p class="mb-6" />
       <a href={path} class="btn-outline hover:white">Read more</a>
     </div>
   </article>
 {/if}
+
+<style>
+  .standard {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-top: 3px;
+  }
+  .feature {
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 3px;
+  }
+  .feature a {
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .feature a:hover {
+    color: var(--accent);
+  }
+  @media (max-width: 767px) {
+    .feature {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+  }
+  @media (min-width: 768px) {
+    .feature {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .feature {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
+</style>

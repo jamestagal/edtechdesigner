@@ -4,9 +4,6 @@
 
   export let catg, tag, allPosts, socialLinks, catgPosts, tagsPosts;
   
-  let current = false;
- 
-  
 </script>
 
 <aside class="w-full">
@@ -23,8 +20,8 @@
       <ul class="text-aside mb-4">
         {#each Object(catgPosts) as {page, name, length}}
           <li class="flex{catg == name ? ' active' : ''} rounded items-center mt-3 mr-3">
-            <div class="customStyle border border-y-black border-l-black" class:selected={current}>
-            <a on:click={() => current = true} href="catgs/{page}">{name}</a></div>
+            <div class="customStyle border border-y-black border-l-black">
+            <a on:click href="catgs/{page}">{name}</a></div>
             <div style="display: flex; align-items: center; font-size: 0.8em; background-color: var(--surface); color: white; border-radius: 0px 0.25em 0.25em 0px; padding: 0px 0.5em; align-self: stretch;">{length}</div>
           </li>
         {/each}
@@ -47,18 +44,11 @@
   </div>
 </aside>
 <style>
-  a:active {
-    color: #F1F5F9;
-  }
   .active {
     color: var(--accent);
   }
   .customStyle {
     padding: 0px 0.5em;
     border-radius: 0.25em 0px 0px 0.25em;
-  }
-  .selected {
-    background: var(--accent);
-    color: #F1F5F9;
   }
 </style>
