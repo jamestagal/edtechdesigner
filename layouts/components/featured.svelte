@@ -15,6 +15,7 @@
     catg_tags: false,
     continue: false,
     feature: true,
+    citation: true,
   };
 
   let featureIdx = 0;
@@ -87,20 +88,13 @@
               'Frame'
                 ? 'md:mb-10 sm:mb-5'
                 : 'mb-15'}"
-            >
+              >
               <PostMeta {post} {catgPosts} {tagsPosts} {pm} />
             </ul>
           </div>
           <div class="col-lg-2" />
         </div>
-        <div class="citation text-meta absolute">
-          <span
-            >{@html post.fields.image.citation.replaceAll(
-              "<a ",
-              "<a target='blank' rel='noopener'"
-            )}</span
-          >
-        </div>
+
 
         <!-- Carousel Overlay Text -->
         <button 
@@ -157,12 +151,6 @@
   }
   .feature {
     bottom: 20%;
-  }
-  .citation {
-    color: rgba(255, 255, 255, 0.9);
-    background-color: rgba(1, 1, 1, 0.3);
-    bottom: 3%;
-    left: 5%;
   }
   ul {
     font-family: Anton, sans-serif;
