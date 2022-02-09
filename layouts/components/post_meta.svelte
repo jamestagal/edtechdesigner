@@ -24,12 +24,22 @@
 {/if}
 {#if pm.date_created}
   <li class="mr-2 my-0 inline-flex">
-    {dateCreated}
+  {dateCreated}
   </li>
 {/if}
 {#if pm.date_modified}
   <li class="mr-2 my-0 inline-flex">
-    Updated: {dateModified}
+  {dateModified}
+  </li>
+{/if}
+{#if pm.citation}
+<li class="mx-0 -mt-1 text-meta inline-flex">
+  <i class="las la-image {pm.feature ? ' feature' : ' standard'}" />
+</li>
+  <li class="mr-2 ml-1 my-0 inline-flex">
+ {@html post.fields.image.citation.replaceAll(
+  "<a ",
+  "<a target='blank' rel='noopener noreferrer'")}
   </li>
 {/if}
 {#if pm.catg_tags}
