@@ -14,7 +14,7 @@
   "theme": {
     "postsPerPage": 4,
     "projsPerPage": 4,
-    "projsSort": "Date",
+    "projsSort": "Name",
     "projsSortValues": "Date, Name",
     "tagsPerPage": 12,
     "mathTypesetting": true,
