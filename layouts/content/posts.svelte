@@ -43,6 +43,21 @@
   <div class="w-0 md:w-1/12 xl:w-2/12" />
   <div class="w-full md:w-10/12 xl:w-8/12 px-2 md:px-0">
     <div class="row flex flex-wrap">
+      {#if !h5p}
+      <div class="relative mb-8 w-full">
+        <img
+          class="rounded-lg overflow-hidden w-full h-screen-60 object-cover object-center"
+          src="assets/posts/{image.src}"
+          alt={image.alt}
+        />
+        <span class="text-meta"
+          >{@html image.citation.replaceAll(
+            "<a ",
+            "<a target='blank' rel='noopener'"
+          )}</span
+        >
+      </div>
+      {/if}
       <div class="w-full md:w-9/12 mb-5 sm:mb-0 px-0 md:pr-10">
         <h1 class="header text-2xl mb-2 sm:text-3xl md:text-4xl">{title}</h1>
         <ul class="text-meta flex flex-wrap">
@@ -56,32 +71,20 @@
         <div class="w-full order-last md:order-none md:w-3/12 mb-5 mb-lg-0 px-0">
           <Aside {allPosts} {catgPosts} {tagsPosts} {socialLinks} />
         </div>
-      <div class="relative mb-8 w-full">
         {#if h5p}
-        <iframe 
-          class="w-full h-full" 
-          title={title}
-          width="1088"
-          height="637"
-          frameborder="0"
-          allowfullscreen="allowfullscreen"
-          allow="geolocation *; microphone *; camera *; midi *; encrypted-media *"
-          src={h5p.src}
-        />
-        {:else}
-        <img
-          class="rounded-lg overflow-hidden w-full h-screen-60 object-cover object-center"
-          src="assets/posts/{image.src}"
-          alt={image.alt}
-        />
-        <span class="text-meta"
-          >{@html image.citation.replaceAll(
-            "<a ",
-            "<a target='blank' rel='noopener'"
-          )}</span
-        >
+          <div class="relative mb-8 w-full">
+            <iframe 
+              class="w-full h-full" 
+              title={title}
+              width="1088"
+              height="637"
+              frameborder="0"
+              allowfullscreen="allowfullscreen"
+              allow="geolocation *; microphone *; camera *; midi *; encrypted-media *"
+              src={h5p.src}
+            />
+          </div>
         {/if}
-      </div>
     </div>
   </div>
   <div class="w-0 md:w-1/12 xl:w-2/12" />
