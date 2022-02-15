@@ -1,20 +1,24 @@
 {
-  "title": "Employment Timeline",
-  "postsGroup": "Curriculum Vitae",
+  "title": "Casual Conversation Topics - Listening and Speaking",
+  "postsGroup": "Education Technology at CIT",
   "image": {
-    "src": "scott-graham-OQMZwNd3ThU-unsplash.jpg",
+    "src": "bewakoof-com-official-mG-HdjYiPtE-unsplash.jpg",
     "alt": "Post Image",
-    "citation": "Photo by <a href='https://unsplash.com/@homajob?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Scott Graham</a> on <a href='https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>"
+    "citation": "Photo by <a href='https://unsplash.com/@bewakoofofficial?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Bewakoof.com Official </a> on <a href='https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'> Unsplash</a>"
   },
   "author": {
     "name": "Benjamin Waller",
     "url": "pages/about"
   },
-  "dateCreated": "1 September 2020",
+  "dateCreated": "14 February 2022",
   "dateModified": "",
-  "categories": ["Professional Profile"],
-  "tags": ["Employment"],
-  "featured": false,
+  "categories": ["Education Technology"],
+  "tags": ["Canberra Institute of Technology", "H5P Technology", "English as an Additional Language"],
+  "featured": true,
   "draft": true,
-  "articleBody": "Nunc et porttitor est, vel pulvinar nibh. Suspendisse imperdiet at arcu eu molestie. Integer ut mauris tellus. Duis lectus lectus, finibus at libero eget, bibendum tempus purus. Curabitur vitae nisi sed nibh imperdiet accumsan non ut mi. Praesent commodo purus at aliquet accumsan. Vestibulum ante ipsum primis in faucibus orci."
+  "articleSnapshot": "This post illustrates the use of a H5P Interactive Book to build a learning activity for developing casual conversations for EAL students.",
+  "articleBody": "Nunc et porttitor est, vel pulvinar nibh. Suspendisse imperdiet at arcu eu molestie. Integer ut mauris tellus. Duis lectus lectus, finibus at libero eget, bibendum tempus purus. Curabitur vitae nisi sed nibh imperdiet accumsan non ut mi. Praesent commodo purus at aliquet accumsan. Vestibulum ante ipsum primis in faucibus orci.",
+  "h5p": {
+    "src": "https://edtechdesigner.h5p.com/content/1291167045295944159/embed"
+  }
 }
