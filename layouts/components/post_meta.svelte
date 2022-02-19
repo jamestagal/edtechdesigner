@@ -1,5 +1,5 @@
 <script>
-  import { get_description } from "../scripts/get_description.svelte";
+  import { get_excerpt } from "../scripts/get_excerpt.svelte";
   export let post, catgPosts, tagsPosts, pm;
 
   let path = post.path;
@@ -7,83 +7,83 @@
   let author_name = post.author_name ?? post.fields.author.name;
   let dateCreated = post.dateCreated ?? post.fields.dateCreated;
   let dateModified = post.dateModified ?? post.fields.dateModified;
+  let title = (post.dateModified ?? post.fields.title) ?? '';
   let tags = post.tags ?? post.fields.tags;
   let catgs = post.catgs ?? post.fields.categories;
   let cardBody = pm.description
-    ? get_description(post.fields.articleBody, 170)
+    ? get_excerpt(post.fields.articleBody, 170)
     : "";
 </script>
 
-{#if pm.author}
+<ul>
+  {#if pm.author}
+    <li class="mx-0 -mt-1 text-meta inline-flex">
+      <i class="las la-user-astronaut{pm.feature ? ' feature' : ' standard'}" />
+    </li>
+  <li class="mr-2 my-0 inline-flex">
+    <a href={author_url}>{author_name}</a>
+  </li>
+  {/if}
+  {#if pm.date_created}
+    <li class="mr-2 my-0 inline-flex">
+    {dateCreated}
+    </li>
+  {/if}
+  {#if pm.date_modified}
+    <li class="mr-2 my-0 inline-flex">
+    {dateModified}
+    </li>
+  {/if}
+  {#if pm.citation}
   <li class="mx-0 -mt-1 text-meta inline-flex">
-    <i class="las la-user-astronaut{pm.feature ? ' feature' : ' standard'}" />
+    <i class="las la-image {pm.feature ? ' feature' : ' standard'}" />
   </li>
-<li class="mr-2 my-0 inline-flex">
-  <a href={author_url}>{author_name}</a>
-</li>
-{/if}
-{#if pm.date_created}
-  <li class="mr-2 my-0 inline-flex">
-  {dateCreated}
-  </li>
-{/if}
-{#if pm.date_modified}
-  <li class="mr-2 my-0 inline-flex">
-  {dateModified}
-  </li>
-{/if}
-{#if pm.citation}
-<li class="mx-0 -mt-1 text-meta inline-flex">
-  <i class="las la-image {pm.feature ? ' feature' : ' standard'}" />
-</li>
-  <li class="mr-2 ml-1 my-0 inline-flex">
- {@html post.fields.image.citation.replaceAll(
-  "<a ",
-  "<a target='blank' rel='noopener noreferrer'")}
-  </li>
-{/if}
-{#if pm.catg_tags}
-  <br />
-  <li class="mr-2 my-0 flex">
-    <div style="display: flex; align-items: center; font-size: 0.8em; background-color: var(--surface); color: white; padding: 0px 0.5em; align-self: stretch; border-radius: 0.25em 0px 0px 0.25em;">
-    Category</div>
-    {#each catgs as catg, i}
-      {#each Object(catgPosts) as { page, name }}
-        {#if catg == name}
-        <div class="border border-inherit border-y-black border-l-black bg-white" style="padding: 0px 0.5em; border-radius: 0px 0.25em 0.25em 0px; text-decoration: none;">
-          <a href="catgs/{page}" class="ml-0.5">
-            {name}{#if i < catgs.length - 1},{/if}
-          </a></div>
-        {/if}
+    <li class="mr-2 ml-1 my-0 inline-flex">
+  {@html post.fields.image.citation.replaceAll(
+    "<a ",
+    "<a target='blank' rel='noopener noreferrer'")}
+    </li>
+  {/if}
+  {#if pm.catg_tags}
+    <li class="mr-2 my-0 flex">
+      <div style="display: flex; align-items: center; font-size: 0.8em; background-color: var(--surface); color: white; padding: 0px 0.5em; align-self: stretch; border-radius: 0.25em 0px 0px 0.25em;">
+      Category</div>
+      {#each catgs as catg, i}
+        {#each Object(catgPosts) as { page, name }}
+          {#if catg == name}
+          <div class="border border-inherit border-y-black border-l-black bg-white" style="padding: 0px 0.5em; border-radius: 0px 0.25em 0.25em 0px; text-decoration: none;">
+            <a href="catgs/{page}" class="meta ml-0.5">
+              {name}
+            </a>{#if i < catgs.length - 1},{/if}</div>
+          {/if}
+        {/each}
       {/each}
-    {/each}
-  </li>
-  <li class="mr-2 my-0 inline-flex">
-    <div style="display: flex; align-items: center; font-size: 0.8em; background-color: var(--surface); color: white; padding: 0px 0.5em; align-self: stretch; border-radius: 0.25em 0px 0px 0.25em;">
-    Tags</div>
-    {#each tags as tag, i}
-      {#each Object(tagsPosts) as { page, name }}
-        {#if tag == name}
-        <div class="border border-inherit border-y-black border-l-black bg-white" style="padding: 0px 0.5em; border-radius: 0px 0.25em 0.25em 0px; text-decoration: none;">
-          <a href="tags/{page}" class="ml-0.5">
-            {name}{#if i < tags.length - 1},{/if}
-          </a></div>
-        {/if}
+    </li>
+    <li class="mr-2 my-0 inline-flex">
+      <div style="display: flex; align-items: center; font-size: 0.8em; background-color: var(--surface); color: white; padding: 0px 0.5em; align-self: stretch; border-radius: 0.25em 0px 0px 0.25em;">
+      Tags</div>
+      {#each tags as tag, i}
+        {#each Object(tagsPosts) as { page, name }}
+          {#if tag == name}
+          <div class="border border-inherit border-y-black border-l-black bg-white" style="padding: 0px 0.5em; border-radius: 0px 0.25em 0.25em 0px; text-decoration: none;">
+            <a href="tags/{page}" class="meta ml-0.5">
+              {name}
+            </a>{#if i < tags.length - 1},{/if}</div>
+          {/if}
+        {/each}
       {/each}
-    {/each}
-  </li>
-{/if}
+    </li>
+  {/if}
+</ul>
 {#if pm.description}
   <p class="text-base">
     {@html cardBody}
   </p>
 {/if}
 {#if pm.continue}
-  <article class="border-0">
     <div class="mb-4">
-      <a href={path} class="btn-outline hover:white">Read more</a>
+      <a href={path} title="{title}" class="btn-outline hover:white">Read more</a>
     </div>
-  </article>
 {/if}
 
 <style>
@@ -113,5 +113,8 @@
       font-size: 1.5rem;
       line-height: 2rem;
     }
+  }
+  .meta {
+    text-decoration: none;
   }
 </style>
