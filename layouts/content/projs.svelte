@@ -4,7 +4,7 @@
   import Pagination from "../components/paginate.svelte";
 
   // Variables passed in from "html.svelte" via "index.svelte"
-  export let idxContent, allPosts, content, catgPosts, tagsPosts;
+  export let idxContent, allPosts, content, catgPosts, tagsPosts, baseurl;
 
   $: currentPage = content.pager;
   let socialLinks = idxContent.socialLinks;
@@ -99,7 +99,7 @@
         <!-- Set the aside as the last column in the row             -->
         <!-- ------------------------------------------------------- -->
         <div class="w-full md:w-3/12 mb-lg-0 px-0">
-          <Aside {allPosts} {socialLinks} {catgPosts} {tagsPosts} />
+          <Aside {allPosts} {socialLinks} {catgPosts} {tagsPosts} {baseurl} />
         </div>
       </div>
     </div>

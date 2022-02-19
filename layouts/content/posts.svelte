@@ -50,20 +50,20 @@
           src="assets/posts/{image.src}"
           alt={image.alt}
         />
-        <span class="text-meta"
+        <cite class="text-meta"
           >{@html image.citation.replaceAll(
             "<a ",
-            "<a target='blank' rel='noopener'"
-          )}</span
+            "<a target='blank' rel='noopener' "
+          )}</cite
         >
       </div>
       {/if}
-      <div class="w-full md:w-9/12 mb-5 sm:mb-0 px-0 md:pr-10">
-        <h1 class="header text-2xl mb-2 sm:text-3xl md:text-4xl">{title}</h1>
-        <ul class="text-meta flex flex-wrap">
+      <div class="w-full md:w-9/12 mb-5 sm:mb-0 px-0 md:pr-10" role="article">
+        <h1 class="header mb-2">{title}</h1>
+        <div class="text-meta flex flex-wrap" role="complementary">
           <PostMeta {post} {catgPosts} {tagsPosts} {pm} />
-      </ul>
-      <p class="mt-6">
+        </div>
+      <p class="mt-6" role="main">
           {@html articleBody}
         </p>
       </div>

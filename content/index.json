@@ -11,19 +11,6 @@
     "author_site": "Benjamin Waller",
     "image": "logo.png"
   },
-  "theme": {
-    "postsPerPage": 4,
-    "projsPerPage": 4,
-    "projsSort": "Name",
-    "projsSortValues": "Date, Name",
-    "tagsPerPage": 12,
-    "mathTypesetting": true,
-    "codeHighlighting": true,
-    "featuredPage": "Bleed",
-    "featuredPageValues": "Bleed, Frame, None",
-    "colorScheme": "Technobeat",
-    "colorSchemeValues": "Earthliness, Simplicity, Technobeat"
-  },
   "socialLinks": [
     {
       "src": "https://www.linkedin.com/in/benjaminjameswaller/",
@@ -66,5 +53,18 @@
       "enabled": false
     },
     { "src": "", "ico": "", "enabled": false }
-  ]
+  ],
+  "theme": {
+    "postsPerPage": 4,
+    "projsPerPage": 4,
+    "projsSort": "Name",
+    "projsSortValues": "Date, Name",
+    "tagsPerPage": 12,
+    "mathTypesetting": true,
+    "codeHighlighting": true,
+    "featuredPage": "Bleed",
+    "featuredPageValues": "Bleed, Frame, None",
+    "colorScheme": "Technobeat",
+    "colorSchemeValues": "Earthliness, Simplicity, Technobeat"
+  }
 }

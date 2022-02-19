@@ -16,7 +16,7 @@
       />
     </button>
     <!-- </a> -->
-    <div class="footnote mt-2">
+    <div class="footnote mt-2" role="contentinfo">
       © Copyright 2022. All rights reserved.<br />
       Designed and developed by Roberto Rivera.<br />
       Powered by
