@@ -8,7 +8,7 @@
     date_modified: true,
     date_created: true,
     description: false,
-    catg_tags: true,
+    catg_tags: false,
     continue: false,
   };
 
