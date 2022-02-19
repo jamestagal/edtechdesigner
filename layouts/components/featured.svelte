@@ -15,7 +15,7 @@
     catg_tags: false,
     continue: false,
     feature: true,
-    citation: true,
+    citation: false,
   };
 
   let featureIdx = 0;
