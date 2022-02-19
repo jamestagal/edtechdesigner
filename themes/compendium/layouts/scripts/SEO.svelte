@@ -1,10 +1,10 @@
 <script>
   import Ogp from "./openGraph.svelte";
   import Twitter from "./twitter.svelte";
-  import { get_description } from "../scripts/get_description.svelte";
+  import { get_excerpt } from "./get_excerpt.svelte";
 
   // Values passed in from post.svelte or index.svelte via "html.svelte"
-  export let idxContent, content, env;
+  export let idxContent, content, baseurl;
 
   // Defined here for use in the HTML below
   export let url,
@@ -18,7 +18,7 @@
 
   // Define site-level attributes
   let site_name = idxContent.name;
-  let site_url = idxContent.site + env.baseurl;
+  let site_url = idxContent.site + baseurl;
   let locale = idxContent.SEO.locale;
   let author = idxContent.SEO.author;
   let author_site = idxContent.SEO.author_site;
@@ -28,7 +28,7 @@
   if (content.type === "posts") {
     isArticle = true;
     page_title = content.fields.title;
-    description = get_description(content.fields.articleBody, 160);
+    description = get_excerpt(content.fields.articleBody, 160);
     url = site_url + content.path + "/";
     image_url = site_url + "assets/posts/" + content.fields.image.src;
     image_alt = content.fields.image.alt;
