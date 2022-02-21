@@ -54,7 +54,7 @@
           <div class="border border-inherit border-y-black border-l-black bg-white" style="padding: 0px 0.5em; border-radius: 0px 0.25em 0.25em 0px; text-decoration: none;">
             <a href="catgs/{page}" class="meta ml-0.5">
               {name}
-            </a>{#if i < catgs.length - 1},{/if}</div>
+            </a></div>
           {/if}
         {/each}
       {/each}
@@ -68,7 +68,7 @@
           <div class="border border-inherit border-y-black border-l-black bg-white" style="padding: 0px 0.5em; border-radius: 0px 0.25em 0.25em 0px; text-decoration: none;">
             <a href="tags/{page}" class="meta ml-0.5">
               {name}
-            </a>{#if i < tags.length - 1},{/if}</div>
+            </a></div>
           {/if}
         {/each}
       {/each}
