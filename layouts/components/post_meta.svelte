@@ -7,7 +7,7 @@
   let author_name = post.author_name ?? post.fields.author.name;
   let dateCreated = post.dateCreated ?? post.fields.dateCreated;
   let dateModified = post.dateModified ?? post.fields.dateModified;
-  let title = (post.dateModified ?? post.fields.title) ?? '';
+  let title = post.dateModified ?? post.fields.title ?? "";
   let tags = post.tags ?? post.fields.tags;
   let catgs = post.catgs ?? post.fields.categories;
   let cardBody = pm.description
@@ -49,10 +49,10 @@
       <div style="display: flex; align-items: center; font-size: 0.8em; background-color: var(--surface); color: white; padding: 0px 0.5em; align-self: stretch; border-radius: 0.25em 0px 0px 0.25em;">
       Category</div>
       {#each catgs as catg, i}
-        {#each Object(catgPosts) as { page, name }}
+        {#each Object(catgPosts) as { path, name }}
           {#if catg == name}
           <div class="border border-inherit border-y-black border-l-black bg-white" style="padding: 0px 0.5em; border-radius: 0px 0.25em 0.25em 0px; text-decoration: none;">
-            <a href="catgs/{page}" class="meta ml-0.5">
+            <a href={path} class="meta ml-0.5">
               {name}
             </a></div>
           {/if}
@@ -63,10 +63,10 @@
       <div style="display: flex; align-items: center; font-size: 0.8em; background-color: var(--surface); color: white; padding: 0px 0.5em; align-self: stretch; border-radius: 0.25em 0px 0px 0.25em;">
       Tags</div>
       {#each tags as tag, i}
-        {#each Object(tagsPosts) as { page, name }}
+        {#each Object(tagsPosts) as { path, name }}
           {#if tag == name}
           <div class="border border-inherit border-y-black border-l-black bg-white" style="padding: 0px 0.5em; border-radius: 0px 0.25em 0.25em 0px; text-decoration: none;">
-            <a href="tags/{page}" class="meta ml-0.5">
+            <a href={path} class="meta ml-0.5">
               {name}
             </a></div>
           {/if}
