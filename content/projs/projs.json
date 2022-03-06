@@ -1,5 +1,6 @@
 {
 	"title": "Posts",
+	"route": "posts",
 	"enabled": true,
 	"menu": true
 }
