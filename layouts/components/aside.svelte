@@ -21,7 +21,7 @@
         {#each Object(catgPosts) as {path, name, length}}
           <li class="flex{(catg ? catg.name : '') == name ? ' active' : ''} rounded items-center mt-3 mr-3">
             <div class="customStyle border border-y-black border-l-black">
-              <a href={path}>{name} ({length})</a></div>
+              <a href={path}>{name}</a></div>
             <div style="display: flex; align-items: center; font-size: 0.8em; background-color: var(--surface); color: white; border-radius: 0px 0.25em 0.25em 0px; padding: 0px 0.5em; align-self: stretch;">{length}</div>
           </li>
         {/each}
@@ -35,7 +35,7 @@
         {#each Object(tagsPosts) as {path, name, length}}
         <li class="flex{(tag ? tag.name : '') == name ? ' active' : ''} rounded items-center mt-3 mr-3">
             <div class="customStyle border border-inherit border-y-black border-l-black">
-              <a href={path}>{name} ({length})</a></div>
+              <a href={path}>{name}</a></div>
             <div style="display: flex; align-items: center; font-size: 0.8em; background-color: var(--surface); color: white; border-radius: 0px 0.25em 0.25em 0px; padding: 0px 0.5em; align-self: stretch;">{length}</div>
           </li>
         {/each}
