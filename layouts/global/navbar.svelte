@@ -112,7 +112,7 @@
           <a 
             role="menuitem"
             class="block md:inline-flex px-2 py-1 md:py-0"
-            href="posts/"
+            href="posts"
             ><span class="navmenu{content.path == 'posts' ? ' active' : ''}"
             >Posts</span
           ></a
