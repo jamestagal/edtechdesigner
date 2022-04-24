@@ -16,6 +16,9 @@
       />
     </button>
     <!-- </a> -->
+    <div class="m-0 flex justify-center">
+      <img width="120" height="50" src="assets/logo.png" alt="Logo" />
+    </div>
     <div class="footnote mt-2" role="contentinfo">
       © Copyright 2022. All rights reserved.<br />
       Designed and developed by Roberto Rivera.<br />
