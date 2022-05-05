@@ -51,7 +51,7 @@
             <p class="mb-10">{articleBody}</p>
             <form
               data-netlify="true"
-              id="contact"
+              name="contact"
               method="POST"
               action={reqUrl}
               class="w-full max-w-lg"
