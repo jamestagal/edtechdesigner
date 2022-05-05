@@ -1,0 +1,28 @@
+{
+  "title": "Login",
+  "enabled": true,
+  "menu": true,
+  "author": {
+    "name": "Benjmain Waller",
+    "url": "https://www.edtechdesigner.com/"
+  },
+  "image": {
+    "src": "omid-ghobadi-sjoqjY9faJE-unsplash.jpg",
+    "alt": "Post Image",
+    "citation": "Photo by <a href='https://unsplash.com/@omidghaf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Omid Ghobadi</a> on <a href='https://unsplash.com/@omidghaf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>"
+  },
+  "splash": {
+    "src": "khiem-luu-Qa5gI7qsdrw-unsplash.jpg",
+    "alt": "Post Image",
+    "citation": "Photo by <a href='https://unsplash.com/@kluu999?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Khiem Luu</a> on <a href='https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>"
+  },
+  "dateCreated": "1/8/2020",
+  "dateModified": "1/8/2020",
+  "hero": {
+    "pre": "G'day! I'm ",
+    "accent": "Benjamin,",
+    "post": "a Teacher and Education Techonolgy Designer.",
+    "tagline": ""
+  },
+  "articleBody": "I design and develop educational programs in the LLND (Language Literacy, Numeracy and Digital) department at the Canberra Institute of Technology (CIT). I have taught English as a Second Language (ESL) and now EAL (English as an Additional Language) in the AMEP program both at the CIT and AMES in Victoria for over a decade. I have worked as an education designer at CIT in a team, leading the Innovative Learning Resources project as part of CIT’s Strategic Compass 2020 initiative. <br><br> My passion for language teaching, eLearning and instructional design and technology has enabled me to develop innovative online courses and resources for a range of education projects with a focus on consistent, functional and bite-size learning design to facilitate learner engagement and rich learning experiences."
+}
