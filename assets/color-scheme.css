@@ -4,7 +4,7 @@
 .lt-theme {
   --primary: #183153;
   --secondary: #f5f5f5;
-  --accent: #E5B80B;
+  --accent: #e2127a;
   --background: #ffffff;
   --surface: #183153;
   --on-primary: #ffffff;
@@ -16,7 +16,7 @@
 .dk-theme {
   --primary: #183153;
   --secondary: #202020;
-  --accent: #E5B80B;
+  --accent: #e2127a;
   --background: #0e0e0e;
   --surface: #151515;
   --on-primary: #ffffff;
