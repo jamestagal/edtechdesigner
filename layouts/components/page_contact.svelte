@@ -126,10 +126,10 @@
                   />
                 </div>
               </div>
-              <div class="md:flex md:items-center">
-                <div data-netlify-recaptcha="true">
-                </div>
-              </div>
+<!--                 <div class="md:flex md:items-center">
+                  <div data-netlify-recaptcha="true">
+                  </div>
+                </div> -->
               <div class="md:flex md:items-center">
                 <div class="md:w-1/3">
                   <button class="btn-outline mb-6 px-4 rounded" type="submit">
