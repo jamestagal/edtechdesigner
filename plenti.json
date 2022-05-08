@@ -1,5 +1,5 @@
 {
-	"build": "public",
+	"build": "deploy/public",
 	"baseurl": "/",
 	"theme": "compendium",
 	"theme_config": {
