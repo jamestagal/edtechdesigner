@@ -4,7 +4,7 @@
 
    // function and API endpoint for sending the contact request
    import { send_contact } from "../scripts/send_contact.svelte";
-  const reqUrl = "/api/submit";
+  const reqUrl = "/.netlify/functions/submit";
 
   // Variables passed in from "html.svelte"
   export let idxContent, allPosts, catgPosts, tagsPosts;
