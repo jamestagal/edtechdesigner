@@ -2,7 +2,7 @@
   // Aside component for search, categories, and tags
   import Aside from "./aside.svelte";
 
-   // function and API endpoint for sending the contact request
+   // function and API endpoint for sending the contact request for Netlify
    import { send_contact } from "../scripts/send_contact.svelte";
   const reqUrl = "/.netlify/functions/submit";
 
