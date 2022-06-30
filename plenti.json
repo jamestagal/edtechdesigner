@@ -5,7 +5,7 @@
 	"theme_config": {
 		"compendium": {
 			"url": "https://github.com/plenti-themes/compendium",
-			"commit": "ea420052c6dd1c7806ed6009f8253841301d7b3a"
+			"commit": "0d8efd14512633f3db1bf0d8f4f136132225e80d"
 		}
 	},
 	"local": {
@@ -19,5 +19,11 @@
 		"posts": "post/:fields(title)",
 		"projs": ":fields(route)/:paginate(totalProjPages)",
 		"tags": ":fields(route)"
+	},
+	"cms": {
+		"repo": "",
+		"redirect_url": "",
+		"app_id": "",
+		"branch": ""
 	}
 }
