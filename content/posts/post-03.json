@@ -17,7 +17,7 @@
   "featured": true,
   "draft": true,
   "articleSnapshot": "A post outlining a build project for a course called Introduction to Organisational Cyber Security at CIT.",
-  "articleBody": "This course provides introductory knowledge and skills for cyber security in an organisation. The course covered topics such as recognising threats, risks and vulnerabilities that affect networks, machines, applications, data, users and infrastructure. <br/><br/>This training was proposed to provide a basic understanding and awareness of Cyber Security for a variety of people, including IT Professionals, small business owners, managers and employees within the private and government sector.",
+  "articleBody": "This course provides introductory knowledge and skills for cyber security in an organisation. The course covered topics such as recognising threats, risks and vulnerabilities that affect networks, machines, applications, data, users and infrastructure. <br/><br/>This training was proposed to provide a basic understanding and awareness of Cyber Security for a variety of people, including IT Professionals, small business owners, managers and employees within the private and government sector. <br/><br/>In addition it also covers: <li>an introduction to common cyber security attack mechanisms</li> <li>an introduction to identity and threat management</li> <li>security issues surrounding Internet of Things (IOT) devices</li> Finally, the course introduces the implementation of tools and systems an organisation can use to protect from cyber-attacks.",
   "h5p": {
     "src": "https://edtechdesigner.h5p.com/content/1291111834424327119/embed"
   }
