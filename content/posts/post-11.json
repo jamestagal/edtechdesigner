@@ -1,0 +1,25 @@
+{
+    "title": "Ed-Tech Symposium 2022",
+    "postsGroup": "Speaking Events",
+    "image": {
+      "src": "ed-techSymposium-2022.png",
+      "alt": "Post Image",
+      "citation": "Photo by Benjamin Waller"
+    },
+    "author": {
+      "name": "Benjamin Waller",
+      "url": "pages/about"
+    },
+    "dateCreated": "19 July 2022",
+    "dateModified": "",
+    "categories": ["Technology Enhanced Learning"],
+    "tags": ["H5P"],
+    "featured": true,
+    "draft": true,
+    "articleSnapshot": "Find out about how I adapted traditional resources into highly interactive learning activities using H5P's Course Presentation &  Interactive Book.",
+    "articleBody": "All teachers are well familiar with how to adapt paper-based resources for teaching in their classrooms. Since the pandemic the move to deliver more learning online and blended approaches has meant a surge in the development of interactive online learning. However there is a real art to the creation process and the decisions you need to make to transform these traditional static resources into high rich interactive learning materials. At the <a target=\"_blank\" href=\"https://www.englishaustralia.com.au/events/event/2022-ed-tech-symposium\"> Ed-Tech Symposium 2022</a>, I covered the thought processes and educational decisions you need to consider when developing such resources. We first need to : <br/><ol> <li> <b>Choose the right tool for the job</b> and in this case it's H5P, because it offers a great range of content types to build interactive learning. H5P is a framework and suite of authoring tools to create, share and reuse interactive learning activities.  It’s a free and open source tool and it’s incredibly easy and intuitive to use. There are currently 52 different content types available on their website, <a target=\"_blank\" href=\"https://h5p.org/\"> H5P.org</a>. And plenty of plugins and integration into many platforms. </li><li><b>Adapt the elements of the resource</b> - and this is where you need to decide what to include, what not to include - this is very much a trial and error process and can be challenging and it will depend on your knowledge of the tools, but in general, you need to be selective, minimal in design and build from there and then just experiment to see what works and what doesn’t.</li> <li> <b>Build in interactivity</b> with meaningful engagement and you can do this with quizzing which is built-in to H5P. It reviews & consolidates the learning.</li> <li> <b>Format for online learning experiences</b> and you can use strategies such as segmenting and scaffolding the learning among others and I’ll talk about how you can incorporate Richard Mayer’s 12 Multimedia Learning principles into your design process.</li> <li><b>Creativity and passion</b> and I think these go out saying but I think it's worth saying. As teachers we need to be creative and be passionate about our work and certainly creating and designing learning involves being creative. For instance thinking in new ways or adapting to make things work. Ultimately it makes for better experiences and outcomes for all. I'm a teacher but I’ve transitioned into ED Tech & design so hopefully my presentation can help you think about how you can improve your learning design. </li></ol><em>Below is the presentation I used. There are links to the resources and H5P activities I build included.</em>",
+    "h5p": {
+      "src": "https://edtechdesigner.h5p.com/content/1291683557542225509/embed"
+    }
+  }
+  
