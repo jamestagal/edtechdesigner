@@ -43,7 +43,7 @@
   <div class="w-0 md:w-1/12 xl:w-2/12" />
   <div class="w-full md:w-10/12 xl:w-8/12 px-2 md:px-0">
     <div class="row flex flex-wrap">
-      {#if !h5p && !youtube}
+      {#if !youtube || !h5p }
       <div class="relative mb-8 w-full">
         <img
           class="rounded-lg overflow-hidden w-full h-screen-60 object-cover object-center"
@@ -71,6 +71,18 @@
         <div class="w-full order-last md:order-none md:w-3/12 mb-5 mb-lg-0 px-0">
           <Aside {allPosts} {catgPosts} {tagsPosts} {socialLinks} />
         </div>
+        {#if youtube}
+        <div class="youtube relative mb-8 w-full">
+          <iframe 
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            title="YouTube video player"
+            frameborder="0"
+            allowfullscreen="allowfullscreen"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            src={youtube.src}
+          />
+        </div>
+      {/if}
           {#if h5p}
             <div class="relative mb-8 w-full">
               <iframe 
@@ -85,18 +97,6 @@
               />
             </div>
           {/if}
-          {#if youtube}
-          <div class="youtube relative mb-8 w-full">
-            <iframe 
-              style="position:absolute;top:0;left:0;width:100%;height:100%;"
-              title="YouTube video player"
-              frameborder="0"
-              allowfullscreen="allowfullscreen"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              src={youtube.src}
-            />
-          </div>
-        {/if}
     </div>
   </div>
   <div class="w-0 md:w-1/12 xl:w-2/12" />
