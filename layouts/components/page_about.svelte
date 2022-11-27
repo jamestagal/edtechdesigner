@@ -67,8 +67,8 @@
       <div class="hidden relative lg:block 2xl:col-span-3">
         <img
           class="absolute inset-0 w-full h-full object-cover object-center"
-          src="assets/pages/ben-profile-pic.jpg"
-          alt="Woman workcationing on the beach"
+          src="assets/pages/ben-profile-pic.webp"
+          alt="Benjamin Waller in a field"
         />
       </div>
     </div>
