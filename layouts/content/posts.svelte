@@ -7,7 +7,7 @@
   export let idxContent, allPosts, catgPosts, tagsPosts;
 
   // Content field Values passed in via layout content {...content.fields}
-  export let articleBody, title, image, author;
+  export let articleBody, title, author;
   export let dateCreated, dateModified, categories, tags, h5p, youtube;
 
   // Post Meta configuration values
@@ -43,7 +43,7 @@
   <div class="w-0 md:w-1/12 xl:w-2/12" />
   <div class="w-full md:w-10/12 xl:w-8/12 px-2 md:px-0">
     <div class="row flex flex-wrap">
-      {#if !youtube || !h5p }
+<!--       {#if !youtube || !h5p }
       <div class="relative mb-8 w-full">
         <img
           class="rounded-lg overflow-hidden w-full h-screen-60 object-cover object-center"
@@ -57,7 +57,7 @@
           )}</cite
         >
       </div>
-      {/if}
+      {/if} -->
       <div class="w-full md:w-9/12 mb-5 sm:mb-0 px-0 md:pr-10" role="article">
         <h1 class="header mb-2">{title}</h1>
         <div class="text-meta flex flex-wrap" role="complementary">
