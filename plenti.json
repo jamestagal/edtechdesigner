@@ -2,10 +2,11 @@
 	"build": "deploy/public",
 	"baseurl": "/",
 	"theme": "compendium",
+	"entrypoint": "global/html.svelte",
 	"theme_config": {
 		"compendium": {
 			"url": "https://github.com/plenti-themes/compendium",
-			"commit": "ad5210d28f77200005c2141e0b10bcdc06db0b1a",
+			"commit": "d344f1d481416111e026148cacec3c9a40613a4b",
 			"exclude": [
 				"content"
 			]
@@ -17,7 +18,7 @@
 	"routes": {
 		"404": ":filename",
 		"catgs": ":fields(route)",
-		"index": ":paginate(totalPages)",
+		"_index": ":paginate(totalPages)",
 		"pages": "pages/:filename",
 		"posts": "post/:fields(title)",
 		"projs": ":fields(route)/:paginate(totalProjPages)",

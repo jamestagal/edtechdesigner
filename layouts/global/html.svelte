@@ -38,6 +38,7 @@
   <body>
     <!-- Setup sticky nav menu at the top -->
     <header
+    
       class="bg-primary sticky top-0 z-50"
       style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.10), 0 2px 4px 0 rgba(0, 0, 0, 0.20);"
     >

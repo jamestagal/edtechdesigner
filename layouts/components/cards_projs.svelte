@@ -43,7 +43,7 @@
             <div class="flex items-center mb-3">
               <img
                 class="inline-block object-cover rounded-md w-32 h-32"
-                src="assets/posts/{post.fields.image.src}"
+                src="media/posts/{post.fields.image.src}"
                 alt={post.fields.image.alt}
               />
               <div class="inline-block ml-2">

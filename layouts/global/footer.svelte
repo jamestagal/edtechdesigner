@@ -17,11 +17,11 @@
     </button>
     <!-- </a> -->
     <div class="m-0 flex justify-center">
-      <img width="150" height="100" src="assets/logo.png" alt="Logo" />
+      <img width="150" height="100" src="logo.png" alt="Logo" />
     </div>
         
     <div class="footnote mt-2" role="contentinfo">
-      © Copyright 2022. All rights reserved.<br />
+      © Copyright 2023. All rights reserved.<br />
       Designed and developed by Roberto Rivera.<br />
       Powered by
       <a target="_blank" rel="noopener" href="https://plenti.co/"

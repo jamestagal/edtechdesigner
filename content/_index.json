@@ -33,14 +33,14 @@
       "enabled": true
     },
     {
-      "src": "https://keybase.io/",
-      "ico": "lab la-keybase",
-      "enabled": false
+      "src": "https://techhub.social/@jamestagal",
+      "ico": "lab la-mastodon",
+      "enabled": true
     },
     {
-      "src": "https://www.reddit.com/",
-      "ico": "lab la-reddit",
-      "enabled": false
+      "src": "https://www.youtube.com/@edtechdesigner",
+      "ico": "lab la-youtube",
+      "enabled": true
     },
     {
       "src": "https://www.instagram.com/jamestagal/",
@@ -62,7 +62,7 @@
     "tagsPerPage": 12,
     "mathTypesetting": true,
     "codeHighlighting": true,
-    "featuredPage": "Bleed",
+    "featuredPage": "Frame",
     "featuredPageValues": "Bleed, Frame, None",
     "colorScheme": "Technobeat",
     "colorSchemeValues": "Earthliness, Simplicity, Technobeat"

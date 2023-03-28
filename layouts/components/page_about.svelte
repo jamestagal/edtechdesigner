@@ -25,7 +25,7 @@
         <div class="xl:max-w-xl">
           <img
             class="mt-6 rounded-lg shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover object-center lg:hidden"
-            src="assets/pages/ben-profile-pic.jpg"
+            src="media/pages/ben-profile-pic.jpg"
             alt="Ben workcationing in the capital"
           />
           <h1
@@ -67,7 +67,7 @@
       <div class="hidden relative lg:block 2xl:col-span-3">
         <img
           class="absolute inset-0 w-full h-full object-cover object-center"
-          src="assets/pages/ben-profile-pic.webp"
+          src="media/pages/ben-profile-pic.webp"
           alt="Benjamin Waller in a field"
         />
       </div>
@@ -107,7 +107,7 @@
   <div>
     <img
       class="w-full object-cover object-bottom h-screen-40 sm:h-screen-60 md:h-screen-70 lg:h-screen-80 xl:h-screen-90"
-      src="assets/pages/{image.src}"
+      src="media/pages/{image.src}"
       alt={image.alt}
     />
     <cite class="text-meta"
@@ -140,7 +140,7 @@
     <img
       class="w-full object-center object-cover h-screen-80 lg:h-screen-90"
       style="filter: brightness(60%)"
-      src="assets/pages/{splash.src}"
+      src="media/pages/{splash.src}"
       alt={splash.alt}
     />
   </div>
