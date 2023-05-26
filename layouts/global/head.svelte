@@ -11,8 +11,8 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="google-site-verification" content="yCeUyDaIyXBCoAE1818fhgmRan4SH3G1DDtidwXjm1Q" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
   {#key isPost}
     <SEO {idxContent} {content} {baseurl} />
