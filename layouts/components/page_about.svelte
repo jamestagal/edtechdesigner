@@ -20,21 +20,26 @@
   <body class="bg-gray-300">
     <div class="bg-gray-100 grid lg:grid-cols-2 2xl:grid-cols-5">
       <div
-        class="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:px-12 lg:py-24 lg:max-w-full xl:mr-0 2xl:col-span-2"
+        class="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:px-12  lg:max-w-full xl:mr-0 2xl:col-span-2"
       >
         <div class="xl:max-w-xl">
           <img
             class="mt-6 rounded-lg shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover object-center lg:hidden"
-            src="media/pages/ben-profile-pic.jpg"
+            src="media/pages/ben-profile-pic.webp"
             alt="Ben workcationing in the capital"
           />
+          <div class="container">
+            <div class="image">
+              <img src="media/pages/h5p-ambassador-2023.png" alt="H5P Embassador Benjamin Waller">
+            </div>
           <h1
-            class="mt-6 text-2xl font-bold text-gray-900 sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl"
+            class="text mt-6 text-2xl font-bold text-gray-900 sm:mt-6 sm:text-3xl lg:text-3xl xl:text-3xl"
           >
           {hero.pre}<span class="accent-b">{hero.accent}</span>
             <br class="hidden lg:inline" />
             {hero.post}
           </h1>
+        </div>
           <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl">
            {@html articleBody}
           </p>
@@ -173,3 +178,21 @@
   src="https://edtechdesigner.h5p.com/content/1291111834693905529/embed"
 />
 </div>
+
+<style>
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+  img {
+    max-width: 100%
+  }
+  .image {
+    flex-basis: 70%;
+    order: 2;
+  }
+/*   .text {
+    text-wrap: balance;
+  } */
+</style>
