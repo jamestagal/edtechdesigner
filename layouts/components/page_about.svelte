@@ -192,7 +192,7 @@
     flex-basis: 70%;
     order: 2;
   }
-/*   .text {
+  .text {
     text-wrap: balance;
-  } */
+  }
 </style>
