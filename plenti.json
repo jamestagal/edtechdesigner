@@ -6,7 +6,7 @@
 	"theme_config": {
 		"compendium": {
 			"url": "https://github.com/plenti-themes/compendium",
-			"commit": "d344f1d481416111e026148cacec3c9a40613a4b",
+			"commit": "ce10eb42639e0bd58b2eecabf8dcda6ba614ca42",
 			"exclude": [
 				"content"
 			]
@@ -17,8 +17,8 @@
 	},
 	"routes": {
 		"404": ":filename",
-		"catgs": ":fields(route)",
 		"_index": ":paginate(totalPages)",
+		"catgs": ":fields(route)",
 		"pages": "pages/:filename",
 		"posts": "post/:fields(title)",
 		"projs": ":fields(route)/:paginate(totalProjPages)",
