@@ -21,7 +21,7 @@
 		"catgs": ":fields(route)",
 		"pages": "pages/:filename",
 		"posts": "post/:fields(title)",
-		"project1": "/slide/:fields(order)",
+		"project1": "slide/:fields(order)",
 		"projs": ":fields(route)/:paginate(totalProjPages)",
 		"tags": ":fields(route)"
 	},
