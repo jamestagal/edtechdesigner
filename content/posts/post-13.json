@@ -1,0 +1,24 @@
+{
+    "title": "The H5P Report - August 2023",
+    "postsGroup": "H5P Reports",
+    "image": {
+      "src": "Thumbnail_H5P_Report_August_2023.webp",
+      "alt": "Post Image",
+      "citation": "Photo by Benjamin Waller"
+    },
+    "author": {
+      "name": "Benjamin Waller",
+      "url": "pages/about"
+    },
+    "dateCreated": "31 August 2023",
+    "dateModified": "",
+    "categories": ["YouTube"],
+    "tags": ["H5P"],
+    "featured": true,
+    "draft": true,
+    "articleSnapshot": "A post of my second YouTube video featuring H5P Technology. This episode features Smart Import and the launch of H5P's Ambassador program.",
+    "articleBody": "This is my second YouTube video on my Youtube channel <strong>EdTech Designer</strong>. In this August H5P Report, I present on recent updates and developments within the H5P Group in the following key points: </br> <strong>New Interactive Features:</strong> </br> In May, H5P released an update introducing Image Choice as a sub-content option in Interactive Video, Interactive Book, Course Presentation, and Column. This enhancement allows educators to create engaging questions with image-based alternatives, enhancing the learning experience. </br> <strong>Development Projects:</strong></br> The H5P Core Team is working on a new development environment for programmers to accelerate H5P's growth. The <a target=\"_blank\" href=\"https://h5p.org/oer-hub-coming\"> H5P OER Content Hub </a>is being tested, which will provide a centralised platform for accessing and exploring H5P content. A major version update, H5P 2.0, is also in the works.</br><strong>AI-powered Content Creation:</strong></br> H5P is embracing AI with the introduction of <a target=\"_blank\" href=\"https://campaigns.h5p.com/h5p-smart-import/\"> Smart Import </a>, an AI-based content import feature. This tool converts static content like videos, audios, texts, and documents into interactive H5P content, enhancing engagement and retention.<strong>AI Integration & Future Plans:</strong></br> H5P is focusing on leveraging AI to empower content creators and plans to allocate more resources to utilise AI effectively. Smart Import is available through <a target=\"_blank\" href=\"https://h5p.com/\"> H5P.com </a>, but plans for self-hosted users are being considered.</br> <strong>Moodle Plugin Improvements:</strong> </br> The official <a target=\"_blank\" href=\"https://moodle.org/plugins/mod_hvp/1.23.2/29419\"> Moodle plugin </a> for H5P has been enhanced thanks to the active Moodle community. Updates include better mobile sizing, streamlined upgrades, H5P Hub fixes, and adherence to upload file sizes, among others.</br> <strong>Community Insights & Priorities:</strong> </br> Insights from a community survey have shaped H5P's future priorities, including improving authoring experience, adding new content types, and enhancing existing ones. They're also addressing concerns related to content consistency and response times.</br> <strong>Editing Experience & Ambassadors Program:</strong> </br> H5P is committed to refining the editing experience and considering external maintainers for development requests. The newly launched H5P Ambassador program aims to involve passionate community members in advancing H5P technology. </br> <strong>New Theme & In-person Appearance:</strong> </br> A new theme for all H5P content types is in development, featuring a modern design and customisable colours. H5P made its presence felt at the InstructureCon conference, showcasing Smart Import to Canvas users. </br>In summary, the video covers H5P's new interactive features, AI-powered content creation, improvements to the Moodle plugin, insights from the community survey, the Ambassador program, and more. It emphasises H5P's dedication to enhancing interactive content creation and engagement in education. </br><em>Below is the YouTube video I posted called, The H5P Report - August 2023. </em>",
+    "youtube": {
+      "src": "https://www.youtube.com/embed/M6RXAWJaK7o"
+  }
+}
