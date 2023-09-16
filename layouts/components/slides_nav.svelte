@@ -1,0 +1,178 @@
+<script>
+
+</script>
+<div class="flex items-center mr-10 flex-1 mobile-sm:hidden inherited-styles-for-exported-element">
+    <div class="w-7"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="house" class="svg-inline--fa fa-house mx-auto block text-base leading-4 text-indigo-500 transition-transform duration-300 scale-100" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+        <path fill="currentColor" d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"></path>
+      </svg></div>
+    <div class="relative flex flex-1 items-center">
+      <div class="absolute w-full bg-blueGray-300 h-px">
+        <div class="absolute w-full origin-left bg-indigo-500 transition-transform duration-300 h-px" style="transform: scaleX(0);"></div>
+      </div>
+      <div class="absolute flex w-full items-center bg-blend-multiply">
+        <div class="absolute cursor-pointer" style="left: calc(20% - 0.25rem);">
+          <div class="rounded-full bg-white transition-all scale-150 absolute" style="width: 8px; height: 8px; margin-top: -4px; margin-left: -4px;"></div>
+          <div class="rounded-full transition-colors bg-blueGray-300 absolute" style="width: 8px; height: 8px; margin-top: -4px; margin-left: -4px;"></div>
+        </div>
+        <div class="absolute cursor-pointer" style="left: calc(40% - 0.25rem);">
+          <div class="rounded-full bg-white transition-all scale-150 absolute" style="width: 8px; height: 8px; margin-top: -4px; margin-left: -4px;"></div>
+          <div class="rounded-full transition-colors bg-blueGray-300 absolute" style="width: 8px; height: 8px; margin-top: -4px; margin-left: -4px;"></div>
+        </div>
+        <div class="absolute cursor-pointer" style="left: calc(60% - 0.25rem);">
+          <div class="rounded-full bg-white transition-all scale-150 absolute" style="width: 8px; height: 8px; margin-top: -4px; margin-left: -4px;"></div>
+          <div class="rounded-full transition-colors bg-blueGray-300 absolute" style="width: 8px; height: 8px; margin-top: -4px; margin-left: -4px;"></div>
+        </div>
+        <div class="absolute cursor-pointer" style="left: calc(80% - 0.25rem);">
+          <div class="rounded-full bg-white transition-all scale-150 absolute" style="width: 8px; height: 8px; margin-top: -4px; margin-left: -4px;"></div>
+          <div class="rounded-full transition-colors bg-blueGray-300 absolute" style="width: 8px; height: 8px; margin-top: -4px; margin-left: -4px;"></div>
+        </div>
+        <div class="absolute cursor-pointer" style="left: calc(100% - 0.25rem);">
+          <div class="rounded-full bg-white transition-all scale-150 absolute" style="width: 8px; height: 8px; margin-top: -4px; margin-left: -4px;"></div>
+          <div class="rounded-full transition-colors bg-blueGray-300 absolute" style="width: 8px; height: 8px; margin-top: -4px; margin-left: -4px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+  
+    *, ::after, ::before {
+      border-style: solid;
+      border-width: 0;
+    }
+  
+    .svg-inline--fa {
+      height: 1em;
+      overflow: visible;
+      vertical-align: -.125em;
+    }
+  
+    .absolute {
+      position: absolute;
+    }
+  
+    .relative {
+      position: relative;
+    }
+  
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .mr-10 {
+      margin-right: 2.5rem;
+    }
+  
+    .block {
+      display: block;
+    }
+  
+    .flex {
+      display: flex;
+    }
+  
+    .h-px {
+      height: 1px;
+    }
+  
+    .w-full {
+      width: 100%;
+    }
+  
+    .w-7 {
+      width: 1.75rem;
+    }
+  
+    .flex-1 {
+      flex: 1 1 0;
+    }
+  
+    .origin-left {
+      transform-origin: left center;
+    }
+  
+    .scale-100 {
+      transform: matrix(1, 0, 0, 1, 0, 0);
+    }
+  
+    .scale-150 {
+      transform: matrix(1.5, 0, 0, 1.5, 0, 0);
+    }
+  
+    .cursor-pointer {
+      cursor: pointer;
+    }
+  
+    .items-center {
+      align-items: center;
+    }
+  
+    .rounded-full {
+      border-radius: 9999px;
+    }
+  
+    .bg-white {
+      background-color: rgb(255 255 255/1);
+    }
+  
+    .bg-indigo-500 {
+      background-color: rgb(99 102 241/1);
+    }
+  
+    .bg-blueGray-300 {
+      background-color: rgb(203 213 225/1);
+    }
+  
+    .inherited-styles-for-exported-element {
+      font-family: "Public Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+  
+    .text-base {
+      font-size: 1rem;
+    }
+  
+    .leading-4 {
+      line-height: 1rem;
+    }
+  
+    .text-indigo-500 {
+      color: rgb(99 102 241/1);
+    }
+  
+    .bg-blend-multiply {
+      background-blend-mode: multiply;
+    }
+  
+    .transition-all {
+      transition: all .15s cubic-bezier(.4, 0, .2, 1);
+    }
+  
+    .transition-colors {
+      transition-duration: .15s;
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+      transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    }
+  
+    .transition-transform {
+      transition: transform cubic-bezier(.4, 0, .2, 1);
+    }
+  
+    .duration-300 {
+      transition-duration: .3s;
+    }
+  
+    @media (max-width: 320px) {
+      .mobile-sm\:hidden {
+        display: none;
+      }
+    }
+  
+    svg:not(:host).svg-inline--fa, svg:not(:root).svg-inline--fa {
+      box-sizing: content-box;
+      overflow: visible;
+    }
+  </style>
