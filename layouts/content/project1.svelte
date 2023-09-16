@@ -21,11 +21,11 @@
         <p>
           {description}
         </p>
-        <!-- <SlidesNav /> -->
+        <SlidesNav />
         <a class="control" href="slide/{Number(order) - 1}">Previous</a>
         {#key content}
           <div id="slide" transition:fade>
-                    <iframe
+            <iframe
               class="w-full h-full"
               {title}
               width="1088"
