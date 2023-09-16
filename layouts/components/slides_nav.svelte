@@ -166,6 +166,31 @@
       transition: transform cubic-bezier(.4, 0, .2, 1);
     }
   
+    .transition-opacity {
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
+    }
+    .opacity-50 {
+    opacity: .5;
+    }
+    .text-slate-800 {
+    --tw-text-opacity: 1;
+    color: rgb(30 41 59/var(--tw-text-opacity));
+    }
+    .p-3 {
+    padding: 0.75rem;
+    }
+    .bg-transparent {
+    background-color: transparent;
+    }
+    .border-slate-200 {
+    --tw-border-opacity: 1;
+    border-color: rgb(226 232 240/var(--tw-border-opacity));
+    }
+    .border {
+    border-width: 1px;
+}
     .duration-300 {
       transition-duration: .3s;
     }
