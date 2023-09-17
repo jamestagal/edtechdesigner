@@ -23,6 +23,7 @@
         </p>
         <SlidesNav />
         <a class="control" href="slide/{Number(order) - 1}">Previous</a>
+        <a class="control" href="slide/{Number(order) + 1}">Next</a>
         {#key content}
           <div id="slide" transition:fade>
             <iframe
@@ -38,8 +39,21 @@
             <a id="exit" href=".">Exit</a>
           </div>
         {/key}
-        <a class="control" href="slide/{Number(order) + 1}">Next</a>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .control {
+    display: flex;
+    position: absolute;
+    margin: 20px;
+  }
+  .control:first-of-type {
+    left: 0;
+  }
+  .control:last-of-type {
+    right: 0;
+  }
+</style>
