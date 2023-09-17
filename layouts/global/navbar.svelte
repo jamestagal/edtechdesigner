@@ -110,7 +110,7 @@
           role="menuitem"
           class="block md:inline-flex px-2 py-1 md:py-0"
           href="/slide/1"
-          ><span class="navmenu{content.path == 'project1' ? ' active' : ''}"
+          ><span class="navmenu{content.type == 'project1' ? ' active' : ''}"
           >Showcase</span
         ></a
         >
