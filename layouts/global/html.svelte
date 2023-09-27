@@ -52,6 +52,7 @@
         this={layout}
         {...content.fields}
         {idxContent}
+        {allContent}
         {allLayouts}
         {allPosts}
         {catgPosts}

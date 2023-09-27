@@ -5,7 +5,7 @@
     dispatch('update-order', slideNum) */
   export let allContent;
   let selectedSlide;
-  let slideNumber = allContent.filter((content) => content.type === "project1");
+let slideNumber = allContent.filter((content) => content.type === "project1");
 </script>
 
 {#each slideNumber as slides}
