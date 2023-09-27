@@ -1,7 +1,7 @@
 <script>
   import { fade } from "svelte/transition";
   import SlidesNav from "../components/slides_nav.svelte";
-  export let title, description, h5p, order, content;
+  export let title, description, h5p, order, content, allContent;
 </script>
 
 <head>
@@ -21,9 +21,9 @@
         <p>
           {description}
         </p>
-        <SlidesNav />
-        <a class="control" href="slide/{Number(order) - 1}">Previous</a>
-        <a class="control" href="slide/{Number(order) + 1}">Next</a>
+        <SlidesNav {allContent}/>
+        <a class="control" href="h5p/example/slide/{Number(order) - 1}">Previous</a>
+        <a class="control" href="h5p/example/slide/{Number(order) + 1}">Next</a>
         {#key content}
           <div id="slide" transition:fade>
             <iframe
