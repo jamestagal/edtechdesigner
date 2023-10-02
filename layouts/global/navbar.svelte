@@ -1,7 +1,9 @@
 <script>
   import { onMount } from "svelte";
   import { writable } from "svelte/store";
-
+  import { count } from "../scripts/stores.svelte";
+  let slide;
+  count.subscribe((n) => (slide = n));
   export let allPages;
   export let isDark, theme, idxContent, content;
 
@@ -64,10 +66,9 @@
         <img width="50" height="50" src="logo.svg" alt="Logo" />
         <a class="navmenu ml-2 text-4xl" href=".">
           {#if site_name.length > 1}
-            <span class="accent" style="opacity: 1;"
-              >{site_name[0]}</span
-            ><span class="navmenu" style="border-bottom: 4px solid transparent;"
-              >{site_name[1]}</span
+            <span class="accent" style="opacity: 1;">{site_name[0]}</span><span
+              class="navmenu"
+              style="border-bottom: 4px solid transparent;">{site_name[1]}</span
             >
           {:else}
             <span class="navmenu" style="border-bottom: 4px solid transparent;"
@@ -103,29 +104,29 @@
             class="block md:inline-flex px-2 py-1 md:py-0"
             href="."
             ><span class="navmenu{content.path == '/' ? ' active' : ''}"
-            >Home</span
-          ></a
+              >Home</span
+            ></a
           >
-          <a 
-          role="menuitem"
-          class="block md:inline-flex px-2 py-1 md:py-0"
-          href="h5p/example/slide/1"
-          ><span class="navmenu{content.type == 'project1' ? ' active' : ''}"
-          >Showcase</span
-        ></a
-        >
-          <a 
+          <a
+            role="menuitem"
+            class="block md:inline-flex px-2 py-1 md:py-0"
+            href="h5p/example/slide/{slide}"
+            ><span class="navmenu{content.type == 'project1' ? ' active' : ''}"
+              >Showcase</span
+            ></a
+          >
+          <a
             role="menuitem"
             class="block md:inline-flex px-2 py-1 md:py-0"
             href="posts"
             ><span class="navmenu{content.path == 'posts' ? ' active' : ''}"
-            >Posts</span
-          ></a
+              >Posts</span
+            ></a
           >
-      <!--     <a href="https://www.edtechdesigner.com" target="_blank" rel="noopener noreferrer">Login</a> -->
+          <!--     <a href="https://www.edtechdesigner.com" target="_blank" rel="noopener noreferrer">Login</a> -->
           {#each allPages as page, i}
             {#if page.fields.enabled && page.fields.menu}
-              <a 
+              <a
                 role="menuitem"
                 class="block md:inline-flex px-2 py-1"
                 href={page.path}
