@@ -67,8 +67,8 @@
 <style>
   @media only screen and (min-width: 1100px) {
   img {
-    width: 10rem; 
-    height: -10rem;
+    width: 12rem; 
+    height: 8rem;
   }
 }
 @media only screen and (min-width: 1100px) {
