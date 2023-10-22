@@ -40,9 +40,9 @@
               {/if}
             {/if}
             <!-- print the project card -->
-            <div class="flex items-center mb-3">
+            <div class="flex flex-wrap items-center mb-3">
               <img
-                class="inline-block object-cover rounded-md w-32 h-32"
+                class="inline-block object-cover rounded-md"
                 src="media/posts/{post.fields.image.src}"
                 alt={post.fields.image.alt}
               />
@@ -64,3 +64,16 @@
     </div>
   {/if}
 {/each}
+<style>
+  @media only screen and (min-width: 1100px) {
+  img {
+    width: 10rem; 
+    height: -10rem;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .flex {
+    flex-wrap: nowrap;
+  }
+}
+</style>
