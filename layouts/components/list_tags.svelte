@@ -26,7 +26,7 @@
         {#each Object(tag.posts) as post}
           <div class="flex items-center my-4">
             <img
-              class="inline-block object-cover rounded-md w-28 h-28"
+              class="inline-block object-cover rounded-md"
               src="media/posts/{post.img_src}"
               alt={post.img_alt}
             />
@@ -44,3 +44,17 @@
     </div>
   </div>
 {/key}
+
+<style>
+  @media only screen and (min-width: 1100px) {
+  img {
+    width: 12rem; 
+    height: 8rem;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .flex {
+    flex-wrap: wrap;
+  }
+}
+</style>
