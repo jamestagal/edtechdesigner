@@ -19,7 +19,7 @@
     <div class="m-0 flex justify-center">
       <img width="150" height="100" src="logo.png" alt="Logo" />
     </div>
-        
+    <div><a href="mailto:ben@edtechdesigner.io" class="footnote mt-2">ben@edtechdesigner.io</a></div>
     <div class="footnote mt-2" role="contentinfo">
       © Copyright 2023. All rights reserved.<br />
       Designed and developed by Roberto Rivera.<br />
