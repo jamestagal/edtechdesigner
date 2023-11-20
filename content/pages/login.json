@@ -1,7 +1,7 @@
 {
   "title": "Login",
-  "enabled": true,
-  "menu": true,
+  "enabled": false,
+  "menu": false,
   "author": {
     "name": "Benjmain Waller",
     "url": "https://www.edtechdesigner.com/"
