@@ -2,8 +2,8 @@
   // Aside component for search, categories, and tags
   import Aside from "./aside.svelte";
 
-   // function and API endpoint for sending the contact request for Netlify
-   import { send_contact } from "../scripts/send_contact.svelte";
+  // function and API endpoint for sending the contact request for Netlify
+  import { send_contact } from "../scripts/send_contact.svelte";
   const reqUrl = "/api/submit";
 
   // Variables passed in from "html.svelte"
@@ -24,7 +24,7 @@
 
   async function handleOnSubmit() {
     frmObj.subject = "Contact Form: " + idxContent.name;
-    contact = new Response("Send", { "status" : 200 , "statusText" : "Processing" });
+    contact = new Response("Send", { status: 200, statusText: "Processing" });
     contact = await send_contact(reqUrl, frmObj);
     if (contact.statusText === "Accepted") {
       frmObj = {};
@@ -50,15 +50,14 @@
             </h2>
             <p class="mb-10">{articleBody}</p>
             <form
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
+              id="contactform"
+              action="https://formsubmit.io/send/2aadc972-0405-47ba-a9ea-02e3a1538bc0"
               name="contact"
               method="POST"
-              action={reqUrl}
               class="w-full max-w-lg"
               on:submit|preventDefault={handleOnSubmit}
             >
-            <input type='hidden' name='form-name' value='contact'>
+              <input type="hidden" name="_formsubmit_id" value="contact" style="display:none"/>
               <div class="flex flex-wrap -mx-3 mb-6">
                 <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                   <label
@@ -69,8 +68,9 @@
                   </label>
                   <input
                     class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-400 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
-                    name="firstName"
+                    name="name"
                     type="text"
+                    id="name"
                     placeholder="Jane"
                     bind:value={frmObj.firstname}
                   />
@@ -84,9 +84,10 @@
                   </label>
                   <input
                     class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-400 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
-                    name="lastName"
+                    name="lastname"
                     type="text"
                     placeholder="Doe"
+                    id="lastname"
                     bind:value={frmObj.lastname}
                   />
                 </div>
@@ -103,6 +104,7 @@
                     class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-400 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
                     name="email"
                     type="email"
+                    id="email"
                     placeholder="Jane.Doe@example.net"
                     required
                     bind:value={frmObj.email}
@@ -120,6 +122,7 @@
                   <textarea
                     class=" no-resize appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-400 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white h-48 resize-none"
                     name="message"
+                    id="message"
                     placeholder="Write something here..."
                     bind:value={frmObj.message}
                   />
@@ -137,14 +140,17 @@
                       <p>Sending...</p>
                     {:then resp}
                       {#if resp.statusText === "Accepted"}
-                      <pre class="footnote">🎉 Done: message sent</pre>
+                        <pre class="footnote">🎉 Done: message sent</pre>
                       {:else if resp.statusText === "form incomplete"}
-                      <pre class="footnote">⛔ Response: form incomplete!</pre>
+                        <pre
+                          class="footnote">⛔ Response: form incomplete!</pre>
                       {:else}
-                      <pre class="footnote">Response: {resp.statusText || "sent"}</pre>
+                        <pre class="footnote">Response: {resp.statusText ||
+                            "sent"}</pre>
                       {/if}
                     {:catch error}
-                      <pre class="footnote">⛔ Response: {error.message || "failed"}</pre>
+                      <pre class="footnote">⛔ Response: {error.message ||
+                          "failed"}</pre>
                     {/await}
                   {/if}
                 </div>
