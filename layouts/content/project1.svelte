@@ -5,9 +5,16 @@
   export let title, description, h5p, order, content;
 
   function setCount(n) {
-    count.set(n);
+    if (n > 0 && n <= order.length) {
+      count.set(n);
+    }
   }
   let selectedSlide = setCount;
+  let isLastSlide = false;
+
+  function toggleButton() {
+    isLastSlide = !isLastSlide;
+  }
 </script>
 
 <head>
@@ -175,7 +182,7 @@
               ></svg
             ><span
               class="whitespace-nowrap text-sm font-semibold text-white transition-opacity duration-300 opacity-100"
-              >Next</span
+              >{isLastSlide ? "Last" : "Next"}</span
             ></a
           >
         </div>
