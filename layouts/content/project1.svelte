@@ -3,17 +3,22 @@
   import SlidesNav from "../components/slides_nav.svelte";
   import { count } from "../scripts/stores.svelte";
   export let title, description, h5p, order, content;
+  let totalSlides;
+  let currentSlide;
 
-  function setCount(n) {
-    if (n > 0 && n <= order.length) {
-      count.set(n);
-    }
+  $: {
+    totalSlides = order.length;
+    currentSlide = $count;
+    console.log('Current slide:', currentSlide, 'Total slides:', totalSlides); // Debug log
   }
-  let selectedSlide = setCount;
-  let isLastSlide = false;
 
-  function toggleButton() {
-    isLastSlide = !isLastSlide;
+  $: isLastSlide = currentSlide === totalSlides;
+  $: isFirstSlide = currentSlide === 1;
+
+  function goToSlide(n) {
+    const newSlide = Math.max(1, Math.min(n, totalSlides));
+    count.set(newSlide);
+    console.log('Navigating to slide:', newSlide); // Debug log
   }
 </script>
 
@@ -59,18 +64,17 @@
               <div class="absolute w-full bg-blueGray-300 h-px">
                 <div
                   class="absolute w-full origin-left bg-indigo-500 transition-transform duration-300 h-px"
-                  style="transform: scaleX(0);"
+                  style="transform: scaleX({($count - 1) / (totalSlides - 1)});"
                 />
               </div>
               <div class="absolute flex w-full items-center bg-blend-multiply">
+                {#each Array(totalSlides) as _, i (i)}
                 <div
-                  on:click={selectedSlide}
-                  class="absolute cursor-pointer {selectedSlide ===
-                  Number(order)
-                    ? ' active'
-                    : ''}"
-                  style="left: calc(20% - 0.25rem);"
-                >
+                on:click={() => goToSlide(i + 1)}
+                class="absolute cursor-pointer"
+                class:active={currentSlide === i + 1}
+                style="left: calc({100 * i / (totalSlides - 1)}% - 0.25rem);"
+              >
                   <div
                     class="rounded-full bg-white transition-all scale-150 absolute"
                     style="width: 8px; height: 8px; margin-top: -4px; margin-left: -4px;"
@@ -80,65 +84,16 @@
                     style="width: 8px; height: 8px; margin-top: -4px; margin-left: -4px;"
                   />
                 </div>
-                <div
-                  class="absolute cursor-pointer"
-                  style="left: calc(40% - 0.25rem);"
-                >
-                  <div
-                    class="rounded-full bg-white transition-all scale-150 absolute"
-                    style="width: 8px; height: 8px; margin-top: -4px; margin-left: -4px;"
-                  />
-                  <div
-                    class="rounded-full transition-colors bg-blueGray-300 absolute"
-                    style="width: 8px; height: 8px; margin-top: -4px; margin-left: -4px;"
-                  />
-                </div>
-                <div
-                  class="absolute cursor-pointer"
-                  style="left: calc(60% - 0.25rem);"
-                >
-                  <div
-                    class="rounded-full bg-white transition-all scale-150 absolute"
-                    style="width: 8px; height: 8px; margin-top: -4px; margin-left: -4px;"
-                  />
-                  <div
-                    class="rounded-full transition-colors bg-blueGray-300 absolute"
-                    style="width: 8px; height: 8px; margin-top: -4px; margin-left: -4px;"
-                  />
-                </div>
-                <div
-                  class="absolute cursor-pointer"
-                  style="left: calc(80% - 0.25rem);"
-                >
-                  <div
-                    class="rounded-full bg-white transition-all scale-150 absolute"
-                    style="width: 8px; height: 8px; margin-top: -4px; margin-left: -4px;"
-                  />
-                  <div
-                    class="rounded-full transition-colors bg-blueGray-300 absolute"
-                    style="width: 8px; height: 8px; margin-top: -4px; margin-left: -4px;"
-                  />
-                </div>
-                <div
-                  class="absolute cursor-pointer"
-                  style="left: calc(100% - 0.25rem);"
-                >
-                  <div
-                    class="rounded-full bg-white transition-all scale-150 absolute"
-                    style="width: 8px; height: 8px; margin-top: -4px; margin-left: -4px;"
-                  />
-                  <div
-                    class="rounded-full transition-colors bg-blueGray-300 absolute"
-                    style="width: 8px; height: 8px; margin-top: -4px; margin-left: -4px;"
-                  />
-                </div>
+                {/each}
               </div>
             </div>
           </div>
           <a
-            on:click={() => setCount(Number(order) - 1)}
-            href="h5p/example/slide/{Number(order) - 1}"
+             on:click={() => goToSlide(currentSlide - 1)}
+              href="h5p/example/slide/{currentSlide - 1}"
             class="flex items-center justify-center rounded-lg border border-slate-200 bg-transparent p-3"
+            class:opacity-50={isFirstSlide}
+            class:cursor-not-allowed={isFirstSlide}
             aria-label="back to previous step"
             tabindex="0"
             ><svg
@@ -159,11 +114,16 @@
           >
 
           <a
-            on:click={() => setCount(Number(order) + 1)}
-            href="h5p/example/slide/{Number(order) + 1}"
+             on:click={() => goToSlide(currentSlide + 1)}
+            href="h5p/example/slide/{currentSlide + 1}"
             class="flex h-[42px] select-none items-center rounded-lg px-3 leading-4 transition-[width] duration-300 bg-gradient-to-b from-indigo-500 to-indigo-600 w-[132px] cursor-pointer hover:from-indigo-600 hover:to-indigo-700 ml-4"
-            tabindex=""
-            aria-label="go to first step"
+            class:opacity-50={isLastSlide}
+            class:cursor-not-allowed={isLastSlide}
+            class:hover:from-indigo-600={!isLastSlide}
+            class:hover:to-indigo-700={!isLastSlide}
+            disabled={isLastSlide}
+            tabindex="0"
+            aria-label={isLastSlide ? "Last slide" : "Go to next step"}
           >
             <svg
               stroke="currentColor"
@@ -216,7 +176,9 @@
     border-style: solid;
     border-width: 0;
   }
-
+  .active {
+    background-color: rgb(99 102 241 / 1);
+  }
   .svg-inline--fa {
     height: 1em;
     overflow: visible;
