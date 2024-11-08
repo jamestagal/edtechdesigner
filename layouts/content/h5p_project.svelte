@@ -23,7 +23,7 @@
 </head>
 
 <!-- Navigation Menu -->
-<div class="flex pagination text-center justify-center pt-8 my-4" role="navigation">
+<div class="flex pagination text-center justify-center pt-8" role="navigation">
   <!-- Previous Buttons -->
   {#if Number(order) > 1}
     <a href="h5p/example/1" class="btn-round m-0.5" aria-label="First">
