@@ -42,6 +42,4 @@
   {#if idxContent.theme.mathTypesetting}
     <link rel="stylesheet" href="katex.min.css" />
   {/if}
-
-  <link rel="stylesheet" href="spa/bundle.css" />
 </head>
