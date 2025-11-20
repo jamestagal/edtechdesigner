@@ -1,0 +1,237 @@
+{
+	"title": "H5P Smart Import",
+	"enabled": true,
+	"menu": true,
+	"articleBody": "",
+	"examples": [
+		{
+			"id": "no-custom",
+			"title": "No Customization",
+			"description": "Without customization (or using the basic Smart Import), the generative AI processes the entire content source to extract key concepts.",
+			"details": "This approach provides a broad overview without focusing on specific objectives or audiences.",
+			"prompt": "No custom prompt needed",
+			"promptType": "Default behavior",
+			"output": "Broad key concepts from the entire source",
+			"colorFrom": "#93c5fd",
+			"colorTo": "#60a5fa",
+			"borderColor": "#60a5fa",
+			"bgColor": "#eff6ff",
+			"accentColor": "#2563eb",
+			"hoverBorder": "#60a5fa",
+			"example": ["The Sun", "Solar Energy", "Nuclear Fusion", "Temperature", "Atmosphere"]
+		},
+		{
+			"id": "user-groups",
+			"title": "Customizing Based On User Groups",
+			"description": "The customization feature can tailor content for specific user groups.",
+			"details": "Smart Import adjusts the concepts and tone of the content to be age-appropriate and relevant.",
+			"prompt": "Make the content relevant for 6-year-olds.",
+			"promptType": "Audience-focused",
+			"output": "Simplified language and relatable concepts",
+			"colorFrom": "#d8b4fe",
+			"colorTo": "#c084fc",
+			"borderColor": "#c084fc",
+			"bgColor": "#faf5ff",
+			"accentColor": "#9333ea",
+			"hoverBorder": "#c084fc",
+			"example": ["The Sun is hot", "It gives us light", "We need the Sun", "The Sun is far away", "Plants need sunlight"]
+		},
+		{
+			"id": "user-output",
+			"title": "Customizing Focused On User Output",
+			"description": "Authors can decide to give more importance to specific ideas or areas of the source provided.",
+			"details": "Smart Import chooses and organizes important ideas focused on your specified area, streamlining the creation process.",
+			"prompt": "Focus on the planets and dwarf planets.",
+			"promptType": "Content-focused",
+			"output": "Key concepts centered on planets and dwarf planets",
+			"colorFrom": "#fdba74",
+			"colorTo": "#fb923c",
+			"borderColor": "#fb923c",
+			"bgColor": "#fff7ed",
+			"accentColor": "#ea580c",
+			"hoverBorder": "#fb923c",
+			"example": ["Mercury", "Venus", "Earth", "Mars", "Pluto (Dwarf Planet)", "Solar System Structure"]
+		},
+		{
+			"id": "learning-obj",
+			"title": "Customizing With Learning Objectives",
+			"description": "Smart Import enables users to align content with specific learning objectives.",
+			"details": "Every generated resource supports the specified learning objective, ensuring consistent focus throughout.",
+			"prompt": "The learner should be able to explain the main events in the formation of the solar system.",
+			"promptType": "Objective-aligned",
+			"output": "Content focused on solar system formation stages",
+			"colorFrom": "#86efac",
+			"colorTo": "#4ade80",
+			"borderColor": "#4ade80",
+			"bgColor": "#f0fdf4",
+			"accentColor": "#16a34a",
+			"hoverBorder": "#4ade80",
+			"example": ["Cloud Collapse", "Disk Formation", "Planet Accretion", "Solar Ignition", "Planetary Migration"]
+		}
+	],
+	"bestPractices": {
+		"worksWell": [
+			{
+				"title": "Focused Instructions",
+				"text": "The best outcomes are obtained when prompts instruct the AI to give particular concepts or portions of the content priority."
+			},
+			{
+				"title": "Rich, Well-Structured Inputs",
+				"text": "The quality and accuracy of generated content are improved by using comprehensive, detailed sources (such as properly formatted articles or documents)."
+			}
+		],
+		"doesntWork": [
+			{
+				"title": "Format-Based Instructions",
+				"text": "Prompts like \"Create a summary of less than 300 words\" are redundant since Smart Import has built-in content types."
+			},
+			{
+				"title": "Instructions Outside Input Scope",
+				"text": "Requests beyond the supplied source material cannot be completed. Keep prompts aligned with your content source."
+			}
+		]
+	},
+	"promptTemplates": [
+		"The learner should be able to explain…",
+		"Make the content relevant for…",
+		"Focus on…"
+	],
+	"contentTypes": [
+		{
+			"id": "crosswords",
+			"name": "Crosswords",
+			"contentType": "Crossword",
+			"icon": "media/h5p/H5P.Crossword.png",
+			"description": "Interactive crossword puzzle for vocabulary practice"
+		},
+		{
+			"id": "dialog-conceptual",
+			"name": "Concepts Cards",
+			"contentType": "Dialog Cards",
+			"icon": "media/h5p/H5P.DialogCards.png",
+			"description": "Flashcard-style learning with definitions and concepts"
+		},
+		{
+			"id": "dialog-contextual",
+			"name": "Flashcards",
+			"contentType": "Dialog Cards",
+			"icon": "media/h5p/H5P.DialogCards.png",
+			"description": "Flashcard-style learning with real-world examples"
+		},
+		{
+			"id": "drag-words",
+			"name": "Drag the Words",
+			"contentType": "Drag the Words",
+			"icon": "media/h5p/H5P.DragText.png",
+			"description": "Fill-in-the-blank activity with draggable words"
+		},
+		{
+			"id": "glossary-difficult",
+			"name": "Glossary: Difficult Words",
+			"contentType": "Accordion",
+			"icon": "media/h5p/H5P.Accordion.png",
+			"description": "Accordion-style glossary of challenging vocabulary"
+		},
+		{
+			"id": "glossary-concepts",
+			"name": "Glossary: Key Concepts",
+			"contentType": "Accordion",
+			"icon": "media/h5p/H5P.Accordion.png",
+			"description": "Accordion-style glossary of important concepts"
+		},
+		{
+			"id": "higher-order",
+			"name": "Higher-Order Questions",
+			"contentType": "Page",
+			"icon": "media/h5p/H5P.Column.png",
+			"description": "Critical thinking questions in a Page content type"
+		},
+		{
+			"id": "interactive-book",
+			"name": "Interactive Book",
+			"contentType": "Interactive Book",
+			"icon": "media/h5p/H5P.InteractiveBook.png",
+			"description": "Multi-page learning experience with various activities"
+		},
+		{
+			"id": "question-set",
+			"name": "Question Set",
+			"contentType": "Question Set",
+			"icon": "media/h5p/H5P.QuestionSet.png",
+			"description": "Collection of various question types"
+		},
+		{
+			"id": "single-choice",
+			"name": "Single Choice Set",
+			"contentType": "Single Choice Set",
+			"icon": "media/h5p/H5P.SingleChoiceSet.png",
+			"description": "Series of multiple choice questions",
+			"flag": "New"
+		},
+		{
+			"id": "summary",
+			"name": "Summary",
+			"contentType": "Page",
+			"icon": "media/h5p/H5P.Column.png",
+			"description": "Text summary in a Page content type"
+		},
+				{
+			"id": "chase",
+			"name": "The Chase",
+			"contentType": "The Chase",
+			"icon": "media/h5p/H5P.TheChase.png",
+			"description": "Interactive quiz game where learners race against time",
+			"flag": "New"
+		}
+	],
+	"interactiveBookContents": [
+		{
+			"name": "Course page",
+			"type": "Text Field",
+			"description": "Webpage text content/Image slider (PDF)/audio or video",
+			"icon": "media/h5p/H5P.TextField.svg"
+		},
+		{
+			"name": "Glossary: Difficult Words",
+			"type": "Accordion",
+			"description": "Expandable list of challenging vocabulary with definitions",
+			"icon": "media/h5p/H5P.Accordion.png"
+		},
+		{
+			"name": "Glossary: Key Concepts",
+			"type": "Accordion",
+			"description": "Expandable list of important concepts with explanations",
+			"icon": "media/h5p/H5P.Accordion.png"
+		},
+		{
+			"name": "Concept Cards",
+			"type": "Dialog Cards",
+			"description": "Interactive flashcards for key learning points",
+			"icon": "media/h5p/H5P.DialogCards.png"
+		},
+		{
+			"name": "Quiz",
+			"type": "Question Set",
+			"description": "Mixed questions: multiple choice, fill-in-blanks, true/false",
+			"icon": "media/h5p/H5P.QuestionSet.png"
+		},
+		{
+			"name": "Drag the Words",
+			"type": "Drag the Words",
+			"description": "Fill-in-the-blank type exercise with draggable words",
+			"icon": "media/h5p/H5P.DragText.png"
+		},
+		{
+			"name": "Main Topics Flashcards",
+			"type": "Dialog Cards",
+			"description": "Flashcards covering the main ideas and topics",
+			"icon": "media/h5p/H5P.DialogCards.png"
+		},
+		{
+			"name": "Summary",
+			"type": "Text Field",
+			"description": "Comprehensive summary of the learning content",
+			"icon": "media/h5p/H5P.TextField.svg"
+		}
+	]
+}

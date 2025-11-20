@@ -3,12 +3,6 @@
     allLayouts,
     allPosts,
     content,
-    enabled,
-    title,
-    image,
-    hero,
-    splash,
-    articleBody,
     catgPosts,
     tagsPosts,
     baseurl;
@@ -24,18 +18,14 @@
   };
 </script>
 
-{#if enabled}
+{#if content.fields.enabled}
   <div class="w-full py-6 sm:py-12">
     <svelte:component
       this={getComponent()}
+      {...content.fields}
       {idxContent}
       {content}
       {allPosts}
-      {title}
-      {image}
-      {hero}
-      {splash}
-      {articleBody}
       {catgPosts}
       {tagsPosts}
       {baseurl}
