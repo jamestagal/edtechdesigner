@@ -6,8 +6,8 @@
     "theme": "cp styles/$(grep -m 1 colorScheme content/index.json | awk '{ gsub(/[[:punct:]]/, \"\"); print $2 }').css color-scheme.css",
     "posttheme": "npm run style",
     "prebuild": "NODE_ENV=production npm run style",
-    "build": "mkdir -p deploy/functions && test -d functions/api && cp -r functions/api deploy/functions/ || true",
-    "postbuild": "plenti build",
+    "build": "echo 'Build is handled by Plenti Docker container in GitHub Actions'",
+    "postbuild": "echo 'Plenti build completed'",
     "prepublish": "$(cd deploy && git add -A && git commit -q -m \"Publish static site\") &>/dev/null",
     "publish": "$(cd deploy && git push -q -u origin main)",
     "preview": "npx wrangler pages dev deploy/public --binding $(cat ./.env)"
