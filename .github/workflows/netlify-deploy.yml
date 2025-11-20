@@ -11,16 +11,19 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Setup Node
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
       - name: Build
         uses: docker://plentico/plenti:latest
         with:
           entrypoint: /plenti
           args: build
-
-      - name: Setup Node
-        uses: actions/setup-node@v2-beta
-        with:
-          node-version: '18'
 
       - name: Deploy to Netlify
         run: |
