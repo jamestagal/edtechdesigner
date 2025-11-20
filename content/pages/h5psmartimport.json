@@ -153,6 +153,13 @@
 			"icon": "media/h5p/H5P.InteractiveBook.png",
 			"description": "Multi-page learning experience with various activities"
 		},
+				{
+			"id": "interactive-video",
+			"name": "Interactive Video",
+			"contentType": "Interactive Video",
+			"icon": "media/h5p/H5P.InteractiveVideo.png",
+			"description": "Creates videos with interactions such Single Choice Set questions and text for key vocabulary"
+		},
 		{
 			"id": "question-set",
 			"name": "Question Set",
@@ -188,7 +195,7 @@
 		{
 			"name": "Course page",
 			"type": "Text Field",
-			"description": "Webpage text content/Image slider (PDF)/audio or video",
+			"description": "Webpage text content/Image slider (PDF)/audio or Interactive Video",
 			"icon": "media/h5p/H5P.TextField.svg"
 		},
 		{
